@@ -291,6 +291,7 @@ h6 {
   font-size: 22px;
   line-height: 160%;
   color: #555555;
+  white-space: pre-line;
 }
 
 .mil-fs14 {
@@ -308,6 +309,7 @@ h6 {
 .hero-sub {
   font-weight: 400;
   line-height: 150%;
+  display: block;
 }
 @media (min-width: 768px) {
   .hero-sub {
@@ -624,6 +626,24 @@ breadcrumbs
 buttons
 
 ------------------------------------------- */
+.mil-btn-banner {
+  border: none;
+  cursor: pointer;
+  border-radius: 60px;
+  padding: 0 20px;
+  height: 30px;
+  background-color: #002fa7;
+  color: #efe9de;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+  margin-top: 10px;
+}
 .mil-btn {
   border: none;
   cursor: pointer;
@@ -1865,6 +1885,7 @@ counters
   font-size: 220px;
   font-weight: 600;
   position: relative;
+  margin-bottom: 100px;
 }
 /* .mil-exp-box-2.mil-type-2:before {
   content: "";
@@ -2915,7 +2936,7 @@ accordion
   font-size: 14px;
 }
 .mil-accordion .mil-accordion-content p {
-  margin: 40px;
+  /* margin: 40px; */
 }
 
 /* -------------------------------------------
