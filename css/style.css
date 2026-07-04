@@ -1327,7 +1327,7 @@ portfolio
   padding-bottom: 100%;
 }
 .mil-project-card .mil-cover-frame.mil-h {
-  padding-bottom: 65%;
+  padding-bottom: 56.25%;
 }
 .mil-project-card .mil-cover-frame.mil-h.mil-longer {
   padding-bottom: 75%;
@@ -1345,7 +1345,7 @@ portfolio
 }
 .mil-project-card .mil-cover-frame .mil-hover-frame img {
   object-fit: cover;
-  object-position: left;
+  object-position: center top;
   width: 100%;
   height: 100%;
 }
@@ -1920,7 +1920,7 @@ blog
 .mil-blog-card .mil-card-cover {
   position: relative;
   overflow: hidden;
-  padding-bottom: 65%;
+  padding-bottom: 56.25%;
   margin-bottom: 30px;
 }
 .mil-blog-card .mil-card-cover .mil-hover-frame {
@@ -1932,10 +1932,11 @@ blog
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
 }
 .mil-blog-card .mil-card-cover .mil-hover-frame img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   width: 100%;
   height: 100%;
+  background-color: #efe9de;
 }
 .mil-blog-card .mil-card-cover .mil-hover-overlay {
   background-color: rgba(10, 11, 15, 0.6);
@@ -2248,7 +2249,7 @@ about
 }
 
 .mil-about-img {
-  background-color: #b89b5e;
+  /* background-color: #b89b5e; */
   height: 100%;
   width: 120%;
   position: absolute;
@@ -2305,7 +2306,7 @@ about
   padding-bottom: 100%;
 } */
 .mil-just-image.mil-h {
-  padding-bottom: 65%;
+  padding-bottom: 56.25%;
 }
 .mil-just-image.mil-h.mil-shortened {
   padding-bottom: 45%;
