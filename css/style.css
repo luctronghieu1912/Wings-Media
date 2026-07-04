@@ -261,9 +261,9 @@ h6 {
 .font-wings {
   color: #555555;
   line-height: 1.05;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: -1%;
-  font-size: 70px;
+  font-size: 40px;
 }
 @media (max-width: 768px) {
   .font-wings {
@@ -292,6 +292,7 @@ h6 {
   line-height: 160%;
   color: #555555;
   white-space: pre-line;
+  font-weight: 400;
 }
 
 .mil-fs14 {
