@@ -258,6 +258,23 @@ h6 {
   line-height: 110%;
   font-weight: 600;
 }
+.font-wings {
+  color: #555555;
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -1%;
+  font-size: 70px;
+}
+@media (max-width: 768px) {
+  .font-wings {
+    color: #555555;
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -1%;
+    font-size: 38px;
+  }
+}
+
 .text-size {
   font-size: 100px;
 }
@@ -267,6 +284,11 @@ h6 {
 
 .mil-text {
   font-size: 16px;
+  line-height: 160%;
+  color: #555555;
+}
+.mil-text-wings {
+  font-size: 22px;
   line-height: 160%;
   color: #555555;
 }
@@ -283,19 +305,29 @@ h6 {
     font-size: 14px;
   }
 }
-@media (max-width: 768px) {
+.hero-sub {
+  font-weight: 400;
+  line-height: 150%;
+}
+@media (min-width: 768px) {
   .hero-sub {
     font-size: 20px;
   }
 }
-.hero-sub {
-  font-size: 35px;
+@media (max-width: 425px) {
+  .hero-sub {
+    font-size: 10px;
+  }
 }
 
 .mil-fs18 {
-  font-size: 18px;
+  font-size: 30px;
 }
-
+@media (max-width: 768px) {
+  .mil-fs18 {
+    font-size: 18px;
+  }
+}
 .mil-fs20 {
   font-size: 20px;
 }
@@ -342,7 +374,7 @@ h6 {
 }
 @media (max-width: 768px) {
   .mil-fs68 {
-    font-size: 48px;
+    font-size: 25px;
   }
 }
 
@@ -596,8 +628,8 @@ buttons
   border: none;
   cursor: pointer;
   border-radius: 60px;
-  padding: 0 40px;
-  height: 60px;
+  padding: 0 20px;
+  height: 30px;
   background-color: #002fa7;
   color: #efe9de;
   text-decoration: none;
@@ -608,6 +640,29 @@ buttons
   font-weight: 600;
   letter-spacing: 2px;
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+  margin-top: 10px;
+  margin-left: 90px;
+}
+@media (max-width: 425px) {
+  .mil-btn {
+    border: none;
+    cursor: pointer;
+    border-radius: 60px;
+    padding: 0 20px;
+    height: 30px;
+    background-color: #002fa7;
+    color: #efe9de;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+    margin-top: 10px;
+    margin-left: 50px;
+  }
 }
 .mil-btn.mil-btn-lg {
   height: 90px;
@@ -617,7 +672,7 @@ buttons
 .mil-btn.mil-btn-border {
   border: solid 2px #002fa7;
   color: #efe9de;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 .mil-btn.mil-btn-soft {
   background-color: #f2b279;
@@ -783,6 +838,10 @@ spaces
 }
 .mil-mb30-about {
   margin-bottom: 10px;
+}
+.mil-mb30-about1 {
+  margin-bottom: 10px;
+  margin-left: 90px;
 }
 .mil-mb20 {
   margin-bottom: 20px;
