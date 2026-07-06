@@ -99,6 +99,13 @@ body {
   align-items: center;
   padding-left: 15px; /* match container padding -> thẳng hàng */
 }
+@media (max-width: 435px) {
+  .logo-wings {
+    display: flex;
+    align-items: center;
+    padding-left: 0px; /* match container padding -> thẳng hàng */
+  }
+}
 
 .logo-wings img {
   height: 100px;
@@ -274,6 +281,11 @@ h6 {
     font-size: 30px;
   }
 }
+@media (max-width: 430px) {
+  .font-wings {
+    font-size: 20px;
+  }
+}
 
 .text-size {
   font-size: 100px;
@@ -283,9 +295,20 @@ h6 {
 }
 
 .mil-text {
-  font-size: 16px;
-  line-height: 160%;
+  font-size: 18px;
   color: #555555;
+  line-height: 20px;
+}
+.text-exp {
+  font-size: 25px;
+  margin-top: 10px;
+  line-height: 130%;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  .text-exp {
+    font-size: 15px;
+  }
 }
 .mil-text-wings {
   font-size: 20px;
@@ -294,6 +317,11 @@ h6 {
   white-space: pre-line;
   font-weight: 400;
   margin-top: 10px;
+}
+@media (max-width: 430px) {
+  .mil-text-wings {
+    font-size: 15px;
+  }
 }
 
 .mil-fs14 {
@@ -312,6 +340,7 @@ h6 {
   font-weight: 400;
   line-height: 150%;
   display: block;
+  font-size: 20px;
 }
 /* @media (min-width: 768px) {
   .hero-sub {
@@ -323,6 +352,11 @@ h6 {
     font-weight: 400;
     line-height: 150%;
     display: block;
+    font-size: 15px;
+  }
+}
+@media (max-width: 430px) {
+  .hero-sub {
     font-size: 13px;
   }
 }
@@ -343,7 +377,11 @@ h6 {
     font-size: 15px;
   }
 }
-
+@media (max-width: 380px) {
+  .mil-fs20 {
+    font-size: 10px;
+  }
+}
 .mil-fs26 {
   font-size: 26px;
 }
@@ -371,6 +409,11 @@ h6 {
     font-size: 28px;
   }
 }
+@media (max-width: 430px) {
+  .mil-fs42 {
+    font-size: 18px;
+  }
+}
 
 .mil-fs68 {
   font-size: 50px;
@@ -383,6 +426,11 @@ h6 {
 @media (max-width: 768px) {
   .mil-fs68 {
     font-size: 45px;
+  }
+}
+@media (max-width: 430px) {
+  .mil-fs68 {
+    font-size: 30px;
   }
 }
 
@@ -668,6 +716,11 @@ buttons
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
   margin-top: 10px;
 }
+@media (max-width: 430px) {
+  .mil-btn-banner {
+    font-size: 7px;
+  }
+}
 .mil-btn {
   border: none;
   cursor: pointer;
@@ -706,7 +759,19 @@ buttons
     transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
     margin-top: 10px;
     margin-left: 90px;
+    width: 30%;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 430px) {
+  .mil-btn {
     width: 50%;
+  }
+}
+
+@media (max-width: 380px) {
+  .mil-btn {
+    width: 60%;
     white-space: nowrap;
   }
 }
@@ -1190,6 +1255,11 @@ menu button
   justify-content: center;
   align-items: center;
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+}
+@media (max-width: 430px) {
+  .mil-menu-btn {
+    margin-left: 0px;
+  }
 }
 .mil-menu-btn span,
 .mil-menu-btn span:after,
@@ -2944,7 +3014,7 @@ accordion
     justify-content: space-between;
     align-items: center;
     color: #efe9de;
-    width: 90%;
+    width: 50%;
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 150px;
@@ -2953,6 +3023,11 @@ accordion
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
     height: 30px;
+  }
+}
+@media (max-width: 430px) {
+  .mil-accordion .mil-accordion-menu {
+    width: 85%;
   }
 }
 
@@ -2981,7 +3056,7 @@ accordion
   font-size: 14px;
 }
 .mil-accordion .mil-accordion-content p {
-  /* margin: 40px; */
+  margin: 5px;
 }
 
 /* -------------------------------------------
@@ -3333,6 +3408,8 @@ footer .mil-footer-bottom {
   border-radius: 30px;
   padding: 4px;
   gap: 2px;
+}
+@media (max-width: 430px) {
 }
 
 /* Kiểu dáng chung cho từng nút */
