@@ -269,9 +269,9 @@ h6 {
   .font-wings {
     color: #555555;
     line-height: 1.05;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: -1%;
-    font-size: 38px;
+    font-size: 30px;
   }
 }
 
@@ -288,11 +288,12 @@ h6 {
   color: #555555;
 }
 .mil-text-wings {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 160%;
   color: #555555;
   white-space: pre-line;
   font-weight: 400;
+  margin-top: 10px;
 }
 
 .mil-fs14 {
@@ -312,14 +313,17 @@ h6 {
   line-height: 150%;
   display: block;
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .hero-sub {
     font-size: 20px;
   }
-}
-@media (max-width: 425px) {
+} */
+@media (max-width: 768px) {
   .hero-sub {
-    font-size: 10px;
+    font-weight: 400;
+    line-height: 150%;
+    display: block;
+    font-size: 13px;
   }
 }
 
@@ -333,6 +337,11 @@ h6 {
 }
 .mil-fs20 {
   font-size: 20px;
+}
+@media (max-width: 768px) {
+  .mil-fs20 {
+    font-size: 15px;
+  }
 }
 
 .mil-fs26 {
@@ -354,13 +363,9 @@ h6 {
 }
 
 .mil-fs42 {
-  font-size: 42px;
+  font-size: 38px;
 }
-@media (max-width: 992px) {
-  .mil-fs42 {
-    font-size: 38px;
-  }
-}
+
 @media (max-width: 768px) {
   .mil-fs42 {
     font-size: 28px;
@@ -377,7 +382,7 @@ h6 {
 }
 @media (max-width: 768px) {
   .mil-fs68 {
-    font-size: 25px;
+    font-size: 45px;
   }
 }
 
@@ -455,7 +460,24 @@ blockquote span {
   letter-spacing: 2px;
   margin-left: 70px;
 }
+@media (max-width: 768px) {
+  .mil-suptitle {
+    display: block;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-left: 10px;
+  }
+}
 
+.mil-suptitle-2 {
+  display: block;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
 /* -------------------------------------------
 
 cursor
@@ -665,7 +687,7 @@ buttons
   margin-top: 10px;
   margin-left: 90px;
 }
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .mil-btn {
     border: none;
     cursor: pointer;
@@ -678,12 +700,14 @@ buttons
     display: inline-flex;
     align-items: center;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 7px;
     font-weight: 600;
     letter-spacing: 2px;
     transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
     margin-top: 10px;
-    margin-left: 50px;
+    margin-left: 90px;
+    width: 50%;
+    white-space: nowrap;
   }
 }
 .mil-btn.mil-btn-lg {
@@ -2913,6 +2937,25 @@ accordion
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
 }
+@media (max-width: 768px) {
+  .mil-accordion .mil-accordion-menu {
+    background-color: #002fa7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #efe9de;
+    width: 90%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 150px;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+    height: 30px;
+  }
+}
+
 .mil-accordion .mil-accordion-menu .mil-accordion-icon {
   display: block;
   width: 20px;
