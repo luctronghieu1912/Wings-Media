@@ -343,12 +343,18 @@ document.addEventListener("DOMContentLoaded", function () {
     sliders
 
     ------------------------------------------- */
+
   var swiper = new Swiper(".mil-reviews-slider", {
     parallax: true,
     autoHeight: true,
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
+    autoplay: {
+      delay: 3000, // Tự động chuyển slide sau mỗi 3 giây
+      disableOnInteraction: false, // Người dùng click/vuốt xong vẫn tự chạy tiếp
+      pauseOnMouseEnter: true, // RÊ CHUỘT VÀO THÌ DỪNG CHẠY
+    },
     navigation: {
       prevEl: ".mil-reviews-nav .mil-prev",
       nextEl: ".mil-reviews-nav .mil-next",
@@ -367,6 +373,11 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true, // RÊ CHUỘT VÀO THÌ DỪNG CHẠY
+    },
     scrollbar: {
       el: ".mil-pagination",
     },
@@ -382,6 +393,11 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true, // RÊ CHUỘT VÀO THÌ DỪNG CHẠY
+    },
     breakpoints: {
       992: {},
     },
@@ -394,6 +410,11 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true, // RÊ CHUỘT VÀO THÌ DỪNG CHẠY
+    },
     navigation: {
       prevEl: ".mil-port-nav .mil-prev",
       nextEl: ".mil-port-nav .mil-next",
@@ -411,6 +432,11 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true, // RÊ CHUỘT VÀO THÌ DỪNG CHẠY
+    },
     breakpoints: {
       992: {},
     },
@@ -422,6 +448,11 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true, // RÊ CHUỘT VÀO THÌ DỪNG CHẠY
+    },
     scrollbar: {
       el: ".mil-about-content-pagination",
     },

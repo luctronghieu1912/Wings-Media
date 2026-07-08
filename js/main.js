@@ -367,6 +367,11 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
     scrollbar: {
       el: ".mil-pagination",
     },
@@ -382,6 +387,11 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
     breakpoints: {
       992: {},
     },
@@ -394,6 +404,11 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
     navigation: {
       prevEl: ".mil-port-nav .mil-prev",
       nextEl: ".mil-port-nav .mil-next",
@@ -526,6 +541,7 @@ document.addEventListener("DOMContentLoaded", function () {
     autoplay: {
       delay: 4000,
       disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
     pagination: {
       el: ".mil-slider-pagination",
