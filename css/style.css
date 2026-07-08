@@ -295,7 +295,7 @@ h6 {
 }
 
 .mil-text {
-  font-size: 18px;
+  font-size: 15px;
   color: #555555;
   line-height: 20px;
 }
@@ -333,7 +333,7 @@ h6 {
 }
 @media (max-width: 768px) {
   .mil-fs16 {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 .hero-sub {
@@ -414,7 +414,20 @@ h6 {
     font-size: 18px;
   }
 }
+.mil-fs42-signature {
+  font-size: 36px;
+}
 
+@media (max-width: 768px) {
+  .mil-fs42-signature {
+    font-size: 28px;
+  }
+}
+@media (max-width: 430px) {
+  .mil-fs42-signature {
+    font-size: 18px;
+  }
+}
 .mil-fs68 {
   font-size: 50px;
 }
@@ -765,7 +778,7 @@ buttons
 }
 @media (max-width: 430px) {
   .mil-btn {
-    width: 50%;
+    width: auto;
   }
 }
 
@@ -952,7 +965,7 @@ spaces
 }
 .mil-mb30-about1 {
   margin-bottom: 10px;
-  margin-left: 90px;
+  margin-left: 80px;
 }
 .mil-mb20 {
   margin-bottom: 20px;
@@ -3009,19 +3022,7 @@ accordion
 }
 @media (max-width: 768px) {
   .mil-accordion .mil-accordion-menu {
-    background-color: #002fa7;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #efe9de;
     width: 50%;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 150px;
-    cursor: pointer;
-    user-select: none;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-    transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
     height: 30px;
   }
 }
@@ -3051,7 +3052,7 @@ accordion
 .mil-accordion .mil-accordion-menu.mil-active:hover {
 }
 .mil-accordion .mil-accordion-content {
-  height: 0;
+  height: 100px;
   overflow: hidden;
   font-size: 14px;
 }
