@@ -619,3 +619,34 @@ window.addEventListener("scroll", function () {
     topPanel.classList.remove("scrolled");
   }
 });
+//----------------------------LOGO WINGS AND HEADER
+const header = document.querySelector(".mil-top-panel");
+const logo = document.getElementById("header-logo");
+
+if (header && logo) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+
+      if (!logo.src.includes("logo-wings-blue.png")) {
+        logo.style.opacity = "0";
+
+        setTimeout(() => {
+          logo.src = "./img/logos/logo-wings-blue.png";
+          logo.style.opacity = "1";
+        }, 150);
+      }
+    } else {
+      header.classList.remove("scrolled");
+
+      if (!logo.src.includes("logo-wings-white.png")) {
+        logo.style.opacity = "0";
+
+        setTimeout(() => {
+          logo.src = "./img/logos/logo-wings-white.png";
+          logo.style.opacity = "1";
+        }, 150);
+      }
+    }
+  });
+}
