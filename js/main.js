@@ -610,3 +610,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // Gọi hàm đổi ngôn ngữ
   changeLanguage(savedLang);
 });
+const topPanel = document.querySelector(".mil-top-panel");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 50) {
+    topPanel.classList.add("scrolled");
+  } else {
+    topPanel.classList.remove("scrolled");
+  }
+});
