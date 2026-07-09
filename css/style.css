@@ -989,6 +989,11 @@ buttons
     margin-bottom: 7px;
   }
 }
+@media (max-width: 380px) {
+  .mil-btn-signature {
+    margin-left: 97px;
+  }
+}
 
 /* @media (max-width: 380px) {
   .mil-btn-signature {
@@ -1198,6 +1203,14 @@ spaces
     font-size: 16px;
   }
 }
+@media (max-width: 380px) {
+  .mil-mb30-signature {
+    margin-left: 7px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}
+
 .mil-mb30-signature1 {
   font-size: 27px;
   text-align: center;
@@ -1259,9 +1272,13 @@ spaces
 
 .mil-p-30-120 {
   padding-top: 30px;
-  padding-bottom: 120px;
+  /* padding-bottom: 120px; */
 }
-
+@media (max-width: 480px) {
+  .mil-p-30-120 {
+    padding-bottom: 50px;
+  }
+}
 .mil-p-30-90 {
   padding-top: 30px;
   padding-bottom: 90px;
@@ -1294,7 +1311,11 @@ spaces
 .mil-p-0-90 {
   padding-bottom: 90px;
 }
-
+@media (max-width: 480px) {
+  .mil-p-0-90 {
+    padding-bottom: 0px;
+  }
+}
 .mil-p-120-60 {
   padding-top: 120px;
   padding-bottom: 60px;
@@ -2775,7 +2796,7 @@ about
 }
 .mil-about-img img {
   width: 100%;
-  height: 100%;
+  height: 80%;
   object-fit: cover;
   object-position: center;
 }
@@ -2855,7 +2876,7 @@ about
 }
 .mil-signature-img img {
   width: 100%;
-  height: 100%;
+  height: 80%;
   object-fit: cover;
 }
 .mil-signature-img.mil-out-right {
