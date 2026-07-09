@@ -650,3 +650,63 @@ if (header && logo) {
     }
   });
 }
+//------------------------- SIGNATURE PROJECT///
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter");
+
+  // Hàm định dạng số (thêm dấu chấm ở hàng nghìn)
+  const formatNumber = (num, needPadding) => {
+    let formatted = num.toLocaleString("vi-VN");
+    // Nếu cần thêm số 0 ở đầu (cho số < 10)
+    if (needPadding && num < 10) {
+      formatted = "0" + formatted;
+    }
+    return formatted;
+  };
+
+  const runCounter = (counter) => {
+    const target = +counter.getAttribute("data-target");
+    const needPadding = counter.getAttribute("data-pad") === "true"; // Kiểm tra xem có cần số 0 ở đầu không
+    const duration = 2500; // 2.5 giây để số chạy chậm và mượt hơn
+
+    let startTimestamp = null;
+
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const currentNum = Math.floor(progress * target);
+
+      counter.innerText = formatNumber(currentNum, needPadding);
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        counter.innerText = formatNumber(target, needPadding);
+      }
+    };
+
+    window.requestAnimationFrame(step);
+  };
+
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        runCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  counters.forEach((counter) => {
+    observer.observe(counter);
+  });
+});
+
+// ///////////////////////////////////////

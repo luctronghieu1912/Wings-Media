@@ -124,7 +124,7 @@ body {
   /* background-color: #2f3034; */
   /* background-color: #002664; */
   background-color: #efe9de;
-  font-family: "montserrat", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   color: #73767b;
   font-weight: 400;
   line-height: 100%;
@@ -349,7 +349,7 @@ h6 {
     font-size: 30px;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .font-wings {
     font-size: 20px;
   }
@@ -363,23 +363,44 @@ h6 {
 }
 
 .mil-text {
-  font-size: 15px;
+  font-size: 25px;
   color: #555555;
-  line-height: 20px;
+  line-height: 130%;
+  width: 97%;
+}
+@media (max-width: 480px) {
+  .mil-text {
+    font-size: 15px;
+  }
+}
+
+.text-title {
+  font-size: 33px;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .text-title {
+    font-size: 25px;
+  }
+}
+@media (max-width: 480px) {
+  .text-title {
+    font-size: 18px;
+  }
 }
 .text-exp {
   font-size: 25px;
   margin-top: 20px;
   line-height: 130%;
   font-weight: 400;
-  width: 120%;
+  width: 145%;
 }
 @media (max-width: 768px) {
   .text-exp {
     font-size: 15px;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .text-exp {
     width: 100%;
   }
@@ -393,7 +414,7 @@ h6 {
   font-weight: 400;
   margin-top: 10px;
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .mil-text-wings {
     font-size: 15px;
   }
@@ -430,7 +451,7 @@ h6 {
     font-size: 15px;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .hero-sub {
     font-size: 13px;
   }
@@ -484,11 +505,85 @@ h6 {
     font-size: 28px;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .mil-fs42 {
     font-size: 18px;
   }
 }
+/* SIGNATURE PROJECT */
+/* Container bọc ngoài */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Giữ nguyên 3 cột */
+  gap: 20px; /* Giảm khoảng cách giữa các ô xuống để nhìn kết dính hơn */
+  max-width: 900px; /* Thu hẹp chiều rộng tổng để toàn bộ khối nhỏ lại */
+  margin: 0 auto;
+  padding: 40px 15px;
+  text-align: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Từng ô thống kê */
+.stat-item {
+  background: transparent; /* Nền hoàn toàn trong suốt */
+  padding: 15px 10px; /* Giảm không gian trống bên trong giúp ô nhỏ gọn */
+  transition: transform 0.3s ease;
+  /* Đã bỏ box-shadow (bóng đổ) vì nền trong suốt dùng bóng sẽ bị lem nhem */
+}
+
+.stat-item:hover {
+  transform: translateY(-3px); /* Hiệu ứng nẩy lên nhẹ nhàng hơn */
+}
+
+/* Phần chứa con số chạy */
+.stat-title {
+  font-size: 34px; /* Thu nhỏ con số lại một chút cho thanh lịch */
+  font-weight: 800;
+  color: #002fa7; /* Màu đỏ nổi bật (bạn có thể đổi tùy ý) */
+  margin-bottom: 8px;
+  white-space: nowrap; /* Giữ con số và dấu trên 1 dòng */
+}
+
+/* Dòng chữ mô tả */
+.stat-item p {
+  font-size: 14px; /* Chữ mô tả nhỏ lại để tỷ lệ chuẩn với con số */
+  color: #333; /* Màu chữ xám đen. NẾU NỀN WEB CỦA BẠN MÀU TỐI, HÃY ĐỔI THÀNH #ffffff */
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* =========================================
+   2. GIAO DIỆN MOBILE & TABLET (Dưới 768px - Vuốt ngang 9 ô)
+   ========================================= */
+@media (max-width: 768px) {
+  .stats-grid {
+    display: flex; /* Chuyển từ Grid sang Flex để dàn ngang */
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Bật tính năng cuộn ngang */
+    -webkit-overflow-scrolling: touch; /* Giúp vuốt mượt trên iOS */
+    scroll-snap-type: x mandatory; /* Hiệu ứng hít vào từng ô */
+    scrollbar-width: none; /* Ẩn thanh cuộn (Firefox) */
+    gap: 15px;
+    padding-bottom: 20px;
+  }
+
+  /* Ẩn thanh cuộn ngang (Chrome, Safari, Edge) */
+  .stats-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .stat-item {
+    flex: 0 0 auto; /* Ngăn không cho ô bị bóp méo */
+    width: 150px; /* Chiều rộng cố định của mỗi ô khi vuốt */
+    scroll-snap-align: start; /* Điểm neo khi người dùng vuốt xong */
+  }
+
+  .stat-title {
+    font-size: 28px; /* Thu nhỏ số lại một chút cho hợp với Mobile */
+  }
+}
+
+/* -------------------- */
 .mil-fs42-signature {
   font-size: 36px;
 }
@@ -498,7 +593,7 @@ h6 {
     font-size: 28px;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .mil-fs42-signature {
     font-size: 18px;
   }
@@ -516,7 +611,7 @@ h6 {
     font-size: 45px;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .mil-fs68 {
     font-size: 30px;
   }
@@ -804,11 +899,12 @@ buttons
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
   margin-top: 10px;
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .mil-btn-banner {
     font-size: 7px;
   }
 }
+
 .mil-btn {
   border: none;
   cursor: pointer;
@@ -826,7 +922,7 @@ buttons
   letter-spacing: 2px;
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
   margin-top: 10px;
-  margin-left: 90px;
+  margin-left: 80px;
 }
 @media (max-width: 768px) {
   .mil-btn {
@@ -851,9 +947,10 @@ buttons
     white-space: nowrap;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .mil-btn {
     width: auto;
+    margin-left: 80px;
   }
 }
 
@@ -863,6 +960,43 @@ buttons
     white-space: nowrap;
   }
 }
+.mil-btn-signature {
+  border: none;
+  cursor: pointer;
+  border-radius: 60px;
+  padding: 0 20px;
+  height: 30px;
+  background-color: #002fa7;
+  color: #efe9de;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+  margin-top: 10px;
+  margin-left: 540px;
+  margin-bottom: 15px;
+}
+@media (max-width: 480px) {
+  .mil-btn-signature {
+    width: auto;
+    margin-left: 115px;
+    font-size: 8px;
+    height: 15px;
+    margin-bottom: 7px;
+  }
+}
+
+/* @media (max-width: 380px) {
+  .mil-btn-signature {
+    width: 60%;
+    white-space: nowrap;
+  }
+} */
+
 .mil-btn.mil-btn-lg {
   height: 90px;
   padding: 0 70px;
@@ -873,6 +1007,7 @@ buttons
   color: #efe9de;
   margin-bottom: 15px;
 }
+
 .mil-btn.mil-btn-soft {
   background-color: #f2b279;
   color: #0a0b0f;
@@ -1024,7 +1159,7 @@ spaces
 .mil-mb90 {
   margin-bottom: 90px;
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .mil-mb90 {
     margin-bottom: 0px;
   }
@@ -1047,6 +1182,35 @@ spaces
   margin-bottom: 10px;
   margin-left: 80px;
 }
+@media (max-width: 480px) {
+  .mil-mb30-about1 {
+    width: 85%;
+  }
+}
+
+.mil-mb30-signature {
+  margin-bottom: 10px;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .mil-mb30-signature {
+    margin-left: 7px;
+    font-size: 16px;
+  }
+}
+.mil-mb30-signature1 {
+  font-size: 27px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  line-height: normal;
+}
+@media (max-width: 480px) {
+  .mil-mb30-signature1 {
+    font-size: 10px;
+    margin-left: 10px;
+  }
+}
+
 .mil-mb20 {
   margin-bottom: 20px;
 }
@@ -1117,7 +1281,7 @@ spaces
   margin-left: 40px;
   padding-right: 10px;
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .mil-p-120-0 {
     margin-left: 0px;
   }
@@ -1371,7 +1535,7 @@ menu button
   align-items: center;
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .mil-menu-btn {
     margin-left: 0px;
   }
@@ -2078,13 +2242,14 @@ counters
 }
 
 .mil-exp-box-2 {
-  padding-top: 50px;
+  padding-top: 30px;
   position: relative;
   background-color: #002fa7;
   padding-bottom: 50px;
   width: 110%;
+  margin-top: 70px;
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .mil-exp-box-2 {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -2096,7 +2261,7 @@ counters
   font-family: "Canela";
   font-size: 20px;
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .font-exp {
     font-size: 10px;
   }
@@ -2106,7 +2271,7 @@ counters
   font-family: "Canela";
   font-size: smaller;
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .font-exp-1 {
     font-size: 20px;
   }
@@ -2116,7 +2281,7 @@ counters
   font-family: "Canela";
   font-size: 40px;
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .font-exp-2 {
     font-size: 30px;
   }
@@ -2127,7 +2292,7 @@ counters
   font-size: 60px;
   margin-top: 5px;
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .font-exp-3 {
     font-size: 40px;
   }
@@ -2233,7 +2398,7 @@ counters
     font-size: 100px;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .mil-exp-box-2 .mil-exp-content .mil-exp-number {
     font-size: 30px;
   }
@@ -2641,7 +2806,7 @@ about
     /* filter: brightness(1.6); */
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .mil-about-text {
     padding-bottom: 0px;
   }
@@ -3270,7 +3435,7 @@ accordion
     height: 30px;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .mil-accordion .mil-accordion-menu {
     width: 85%;
   }
@@ -3654,7 +3819,7 @@ footer .mil-footer-bottom {
   padding: 4px;
   gap: 2px;
 }
-@media (max-width: 430px) {
+@media (max-width: 480px) {
 }
 
 /* Kiểu dáng chung cho từng nút */
