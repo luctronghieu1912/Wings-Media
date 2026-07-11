@@ -87,63 +87,94 @@ document.addEventListener("DOMContentLoaded", function () {
     accordion
 
     ------------------------------------------- */
-  let groups = gsap.utils.toArray(".mil-accordion-group");
-  let menus = gsap.utils.toArray(".mil-accordion-menu");
-  let menuToggles = groups.map(createAnimation);
+  // let groups = gsap.utils.toArray(".mil-accordion-group");
+  // let menus = gsap.utils.toArray(".mil-accordion-menu");
+  // let menuToggles = groups.map(createAnimation);
 
-  menus.forEach((menu) => {
-    menu.addEventListener("click", () => toggleMenu(menu));
-  });
+  // menus.forEach((menu) => {
+  //   menu.addEventListener("click", () => toggleMenu(menu));
+  // });
 
-  function toggleMenu(clickedMenu) {
-    menuToggles.forEach((toggleFn) => toggleFn(clickedMenu));
-  }
+  // function toggleMenu(clickedMenu) {
+  //   menuToggles.forEach((toggleFn) => toggleFn(clickedMenu));
+  // }
 
-  function createAnimation(element) {
-    let menu = element.querySelector(".mil-accordion-menu");
-    let box = element.querySelector(".mil-accordion-content");
+  // function createAnimation(element) {
+  //   let menu = element.querySelector(".mil-accordion-menu");
+  //   let box = element.querySelector(".mil-accordion-content");
 
-    gsap.set(box, {
-      height: "auto",
-    });
+  //   gsap.set(box, {
+  //     height: "auto",
+  //   });
 
-    let animation = gsap
-      .from(box, {
-        height: 0,
-        duration: 0.5,
-        ease: "sine",
-        onComplete: () => {
-          ScrollTrigger.refresh();
-        },
-      })
-      .reverse();
+  //   let animation = gsap
+  //     .from(box, {
+  //       height: 0,
+  //       duration: 0.5,
+  //       ease: "sine",
+  //       onComplete: () => {
+  //         ScrollTrigger.refresh();
+  //       },
+  //     })
+  //     .reverse();
 
-    let lastActiveMenu = null;
+  //   let lastActiveMenu = null;
 
-    return function (clickedMenu) {
-      if (clickedMenu === menu) {
-        let isOpen = animation.reversed();
-        animation.reversed(!isOpen);
+  //   return function (clickedMenu) {
+  //     if (clickedMenu === menu) {
+  //       let isOpen = animation.reversed();
+  //       animation.reversed(!isOpen);
 
-        if (isOpen) {
-          if (lastActiveMenu && lastActiveMenu !== menu) {
-            lastActiveMenu.classList.remove("mil-active");
+  //       if (isOpen) {
+  //         if (lastActiveMenu && lastActiveMenu !== menu) {
+  //           lastActiveMenu.classList.remove("mil-active");
+  //         }
+  //         menu.classList.add("mil-active");
+  //         lastActiveMenu = menu;
+  //       } else {
+  //         menu.classList.remove("mil-active");
+  //       }
+  //     } else {
+  //       animation.reverse();
+  //       if (lastActiveMenu) {
+  //         lastActiveMenu.classList.remove("mil-active");
+  //       }
+  //       clickedMenu.classList.add("mil-active");
+  //       lastActiveMenu = clickedMenu;
+  //     }
+  //   };
+  // }
+  // Chạy thẳng luôn, không cần bọc trong document.addEventListener("DOMContentLoaded", ...)
+  const accordionMenus = document.querySelectorAll(".mil-accordion-menu");
+
+  accordionMenus.forEach((menu) => {
+    menu.addEventListener("click", function (e) {
+      e.preventDefault();
+      console.log("Bạn vừa click vào menu!");
+
+      // Xóa class active ở các tab khác
+      accordionMenus.forEach((otherMenu) => {
+        if (otherMenu !== menu) {
+          otherMenu.classList.remove("active");
+          if (otherMenu.nextElementSibling) {
+            otherMenu.nextElementSibling.style.maxHeight = null;
           }
-          menu.classList.add("mil-active");
-          lastActiveMenu = menu;
+        }
+      });
+
+      // Mở/đóng tab hiện tại
+      this.classList.toggle("active");
+      const content = this.nextElementSibling;
+
+      if (content) {
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
         } else {
-          menu.classList.remove("mil-active");
+          content.style.maxHeight = content.scrollHeight + "px";
         }
-      } else {
-        animation.reverse();
-        if (lastActiveMenu) {
-          lastActiveMenu.classList.remove("mil-active");
-        }
-        clickedMenu.classList.add("mil-active");
-        lastActiveMenu = clickedMenu;
       }
-    };
-  }
+    });
+  });
   /* -------------------------------------------
 
     cursor

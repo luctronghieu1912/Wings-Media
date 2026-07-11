@@ -367,9 +367,21 @@ h6 {
   color: #555555;
   line-height: 130%;
   width: 97%;
+  text-align: justify;
 }
 @media (max-width: 480px) {
   .mil-text {
+    font-size: 15px;
+  }
+}
+.mil-text-1 {
+  font-size: 15px;
+  color: #555555;
+  line-height: 130%;
+  width: 97%;
+}
+@media (max-width: 480px) {
+  .mil-text-1 {
     font-size: 15px;
   }
 }
@@ -394,6 +406,7 @@ h6 {
   line-height: 130%;
   font-weight: 400;
   width: 145%;
+  text-align: justify;
 }
 @media (max-width: 768px) {
   .text-exp {
@@ -436,7 +449,7 @@ h6 {
   font-weight: 400;
   line-height: 150%;
   display: block;
-  font-size: 30px;
+  font-size: 20px;
 }
 /* @media (min-width: 768px) {
   .hero-sub {
@@ -539,7 +552,7 @@ h6 {
 .stat-title {
   font-size: 34px; /* Thu nhỏ con số lại một chút cho thanh lịch */
   font-weight: 800;
-  color: #002fa7; /* Màu đỏ nổi bật (bạn có thể đổi tùy ý) */
+  color: #555555; /* Màu đỏ nổi bật (bạn có thể đổi tùy ý) */
   margin-bottom: 8px;
   white-space: nowrap; /* Giữ con số và dấu trên 1 dòng */
 }
@@ -547,7 +560,7 @@ h6 {
 /* Dòng chữ mô tả */
 .stat-item p {
   font-size: 14px; /* Chữ mô tả nhỏ lại để tỷ lệ chuẩn với con số */
-  color: #333; /* Màu chữ xám đen. NẾU NỀN WEB CỦA BẠN MÀU TỐI, HÃY ĐỔI THÀNH #ffffff */
+  color: #555555; /* Màu chữ xám đen. NẾU NỀN WEB CỦA BẠN MÀU TỐI, HÃY ĐỔI THÀNH #ffffff */
   margin: 0;
   line-height: 1.4;
 }
@@ -1189,7 +1202,7 @@ spaces
 }
 @media (max-width: 480px) {
   .mil-mb30-about1 {
-    width: 85%;
+    width: 80%;
   }
 }
 
@@ -1212,7 +1225,7 @@ spaces
 }
 
 .mil-mb30-signature1 {
-  font-size: 27px;
+  font-size: 26px;
   text-align: center;
   letter-spacing: 0.5px;
   line-height: normal;
@@ -2275,6 +2288,7 @@ counters
     padding-top: 30px;
     padding-bottom: 30px;
     width: 100%;
+    margin-top: 30px;
   }
 }
 .font-exp {
@@ -3114,7 +3128,7 @@ brands
 /* Responisve cho Mobile */
 @media (max-width: 768px) {
   .partner-slider {
-    padding: 20px 0;
+    padding: 0px 0;
   }
 
   .partner-track {
@@ -3432,7 +3446,7 @@ services
 accordion
 
 ------------------------------------------- */
-.mil-accordion {
+/* .mil-accordion {
   width: 100%;
 }
 .mil-accordion .mil-accordion-menu {
@@ -3488,6 +3502,107 @@ accordion
 }
 .mil-accordion .mil-accordion-content p {
   margin: 5px;
+} */
+
+/* --- Bố cục tổng thể của Accordion --- */
+.mil-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Thay vì dùng margin-bottom, dùng gap sẽ đều và hiện đại hơn */
+  width: 100%;
+}
+
+/* --- Thanh Menu (Tiêu đề) --- */
+.mil-accordion .mil-accordion-menu {
+  background-color: #002fa7; /* Màu xanh Navy gốc */
+  color: #efe9de; /* Màu kem gốc */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Chỉnh lại 100% để tự động khớp với cột */
+  padding: 16px 28px;
+  border-radius: 50px; /* Bo góc viên thuốc thanh lịch hơn 150px */
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 4px 15px rgba(0, 47, 167, 0.15); /* Bóng đổ cùng tone màu xanh */
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+@media (max-width: 768px) {
+  .partner-slider {
+    padding: 20px 0;
+  }
+}
+@media (max-width: 480px) {
+  .mil-accordion .mil-accordion-menu {
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+  }
+}
+/* Hiệu ứng khi rê chuột vào */
+.mil-accordion .mil-accordion-menu:hover {
+  background-color: #002480; /* Màu tối hơn một chút */
+  box-shadow: 0 6px 20px rgba(0, 47, 167, 0.25);
+  transform: translateY(-2px); /* Hiệu ứng nảy nhẹ lên */
+}
+
+/* --- Vẽ Icon Dấu (+) và (-) bằng CSS thuần --- */
+.mil-accordion-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.mil-accordion-icon::before,
+.mil-accordion-icon::after {
+  content: "";
+  position: absolute;
+  background-color: #efe9de;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* Thanh ngang của dấu + */
+.mil-accordion-icon::before {
+  top: 9px;
+  left: 0;
+  width: 20px;
+  height: 2px;
+}
+
+/* Thanh dọc của dấu + */
+.mil-accordion-icon::after {
+  top: 0;
+  left: 9px;
+  width: 2px;
+  height: 20px;
+}
+
+/* Khi có class 'active' (đang mở), xoay thanh dọc để biến thành dấu (-) */
+.mil-accordion-menu.active .mil-accordion-icon::after {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+/* --- Phần Nội Dung (Content) --- */
+.mil-accordion-content {
+  max-height: 0; /* Ẩn đi mặc định để làm hiệu ứng trượt */
+  overflow: hidden; /* Gom đoạn code bị rớt của bạn vào đây */
+  transition:
+    max-height 0.4s ease-in-out,
+    padding 0.4s ease;
+  padding: 0 28px; /* Khớp với padding của menu */
+}
+
+/* Đoạn text bên trong */
+.mil-text-1 {
+  font-size: 15px; /* Chỉnh lại font-size cho dễ đọc */
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin: 15px 0 10px 0;
 }
 
 /* -------------------------------------------
