@@ -342,7 +342,7 @@ h6 {
   line-height: 1.05;
   font-weight: 400;
   letter-spacing: -1%;
-  font-size: 60px;
+  font-size: 50px;
 }
 @media (max-width: 768px) {
   .font-wings {
@@ -361,7 +361,13 @@ h6 {
 .wings {
   margin-top: -5px;
 }
+.mil-text-0 {
+  font-size: 25px;
+  color: #555555;
+  line-height: 130%;
 
+  text-align: justify;
+}
 .mil-text {
   font-size: 25px;
   color: #555555;
@@ -389,6 +395,7 @@ h6 {
 .text-title {
   font-size: 33px;
   white-space: nowrap;
+  line-height: normal;
 }
 @media (max-width: 768px) {
   .text-title {
@@ -418,12 +425,32 @@ h6 {
     width: 100%;
   }
 }
+.exp20 {
+  color: white;
+  font-size: 120px;
+  font-weight: 600;
+  margin-top: 5px;
+}
 
 .mil-text-wings {
   font-size: 30px;
+  line-height: 20%;
+  color: #ffffff;
+  white-space: nowrap;
+  font-weight: 400;
+
+  margin-bottom: 30px;
+}
+@media (max-width: 480px) {
+  .mil-text-wings {
+    font-size: 15px;
+  }
+}
+.mil-text-wings-1 {
+  font-size: 50px;
   line-height: 160%;
   color: #ffffff;
-  white-space: pre-line;
+
   font-weight: 400;
   margin-top: 10px;
 }
@@ -510,7 +537,7 @@ h6 {
 }
 
 .mil-fs42 {
-  font-size: 38px;
+  font-size: 30px;
 }
 
 @media (max-width: 768px) {
@@ -525,17 +552,32 @@ h6 {
 }
 /* SIGNATURE PROJECT */
 /* Container bọc ngoài */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Giữ nguyên 3 cột */
-  gap: 20px; /* Giảm khoảng cách giữa các ô xuống để nhìn kết dính hơn */
-  max-width: 900px; /* Thu hẹp chiều rộng tổng để toàn bộ khối nhỏ lại */
-  margin: 0 auto;
-  padding: 40px 15px;
+
+/* Thuộc tính này áp dụng chung cho tất cả các hàng */
+.stat-row {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center; /* Lệnh quan trọng nhất: Ép tất cả các ô vào chính giữa hàng ngang */
+  align-items: flex-start;
+
   text-align: center;
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
+/* Bạn có thể tùy chỉnh khoảng cách giữa ô 500.000+ và 100+ ở row 2 */
+.row-2 {
+  gap: 100px; /* Tăng giảm số này nếu bạn muốn 2 ô xa nhau hay gần nhau hơn */
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Giữ nguyên 3 cột */
+  gap: 20px; /* Giảm khoảng cách giữa các ô xuống để nhìn kết dính hơn */
+  max-width: 600px; /* Thu hẹp chiều rộng tổng để toàn bộ khối nhỏ lại */
+  margin: 0 auto;
+  /* padding: 40px 15px; */
+  text-align: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
 /* Từng ô thống kê */
 .stat-item {
   background: transparent; /* Nền hoàn toàn trong suốt */
@@ -551,7 +593,7 @@ h6 {
 /* Phần chứa con số chạy */
 .stat-title {
   font-size: 34px; /* Thu nhỏ con số lại một chút cho thanh lịch */
-  font-weight: 800;
+  font-weight: 600;
   color: #555555; /* Màu đỏ nổi bật (bạn có thể đổi tùy ý) */
   margin-bottom: 8px;
   white-space: nowrap; /* Giữ con số và dấu trên 1 dòng */
@@ -598,7 +640,7 @@ h6 {
 
 /* -------------------- */
 .mil-fs42-signature {
-  font-size: 36px;
+  font-size: 30px;
 }
 
 @media (max-width: 768px) {
@@ -990,7 +1032,7 @@ buttons
   letter-spacing: 2px;
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
   margin-top: 10px;
-  margin-left: 540px;
+  margin-left: 530px;
   margin-bottom: 15px;
 }
 @media (max-width: 480px) {
@@ -1198,7 +1240,8 @@ spaces
 }
 .mil-mb30-about1 {
   margin-bottom: 10px;
-  margin-left: 80px;
+  /* margin-left: 80px; */
+  white-space: nowrap;
 }
 @media (max-width: 480px) {
   .mil-mb30-about1 {
@@ -1225,7 +1268,7 @@ spaces
 }
 
 .mil-mb30-signature1 {
-  font-size: 26px;
+  font-size: 20px;
   text-align: center;
   letter-spacing: 0.5px;
   line-height: normal;
@@ -2304,7 +2347,7 @@ counters
 .font-exp-1 {
   font-weight: 100;
   font-family: "Canela";
-  font-size: smaller;
+  font-size: 30px;
 }
 @media (max-width: 480px) {
   .font-exp-1 {
@@ -2314,7 +2357,7 @@ counters
 .font-exp-2 {
   font-weight: 600;
   font-family: "Canela";
-  font-size: 40px;
+  font-size: 33px;
 }
 @media (max-width: 480px) {
   .font-exp-2 {
@@ -2331,6 +2374,10 @@ counters
   .font-exp-3 {
     font-size: 40px;
   }
+}
+.exp-box-logo {
+  width: 200px;
+  height: 200px;
 }
 /* .mil-exp-box-2:after {
   content: "";
@@ -3996,6 +4043,7 @@ footer .mil-footer-bottom {
   height: 100%;
   object-fit: cover;
   z-index: 0;
+  filter: blur(1px);
 }
 
 .mil-banner > *:not(.mil-bg-video) {
