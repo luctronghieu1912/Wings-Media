@@ -538,7 +538,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   var swiper = new Swiper(".myServiceSlider", {
     loop: true,
-    speed: 800, // Tốc độ chuyển ảnh (800ms giúp cảm giác mượt, không quá nhanh)
+    speed: 1000, // Tốc độ chuyển ảnh (800ms giúp cảm giác mượt, không quá nhanh)
     grabCursor: true, // Hiện con trỏ bàn tay khi rê chuột vào để báo hiệu có thể kéo
     allowTouchMove: true, // Cho phép vuốt tay/kéo chuột
     parallax: true, // Tạo hiệu ứng chiều sâu khi trượt nếu cần
