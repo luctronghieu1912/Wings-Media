@@ -4,7 +4,7 @@
   "banner_title": "Stotytelling đa nền tảng\ngiúp doanh nghiệp xây dựng thương hiệu và thúc đẩy tăng trưởng",
   "btn_text": "Khám phá cách chúng tôi làm việc",
   "exp_title": "Đúng câu chuyện. Đúng cách. Đúng nền tảng.",
-  "btn_about": "ĐIỀU LÀM ĐÔI CÁNH KHÁC BIỆT",
+  "btn_about": "ĐỒNG HÀNH CÙNG DOANH NGHIỆP",
   "about_title": "STORYTELLING",
   "about_text": "Storytelling là cách chúng tôi chuyển hóa chiến lược thành những câu chuyện được kể bằng nội dung, phim, sự kiện và các chiến dịch marketing nhằm xây dựng thương hiệu, tạo chuyển đổi và thúc đẩy tăng trưởng.",
 
@@ -18,14 +18,14 @@
   "service_content_title": "Storytelling, Content & Scriptwriting",
   "service_content_desc": "<b>Biến chiến lược thành những câu chuyện tạo giá trị </b> \n•Brand Story •Kịch bản •Nội dung •Creative Concept",
   "service_exp_title": "CSR Campaigns & Social Impact",
-  "service_exp_desc": "Sự kiện văn hoá – nghệ thuật, triển lãm, brand experience và signature event.",
+  "service_exp_desc": "Sự kiện văn hoá – nghệ thuật, triển lãm,\nbrand experience và signature event.",
   "service_com_title": "Brand Strategy",
-  "service_com_desc": "Xây dựng và kết nối cộng đồng, tạo hệ sinh thái giá trị và ảnh hưởng dài hạn.",
+  "service_com_desc": "Xây dựng và kết nối cộng đồng, tạo hệ sinh thái giá trị\nvà ảnh hưởng dài hạn.",
 
-  "brand_film_desc": "Sản xuất phim và nội dung đa phương tiện. Brand Films Corporate Films Documentary TVC Photography",
+  "brand_film_desc": "<b>Sản xuất phim và nội dung đa phương tiện.</b>\nBrand Films Corporate Films Documentary TVC Photography",
 
-  "marketing_desc": "Lan tỏa thương hiệu và tạo chuyển đổi.Marketing Campaigns Digital Social PR Media Relations",
-  "culture_desc": "Kiến tạo những dự án văn hóa có giá trị lâu dài.Cultural Projects Cultural IP Festivals Cultural Event Brand Experiences",
+  "marketing_desc": "<b>Lan tỏa thương hiệu và tạo chuyển đổi.</b>\nMarketing Campaigns Digital Social PR Media Relations",
+  "culture_desc": "<b>Kiến tạo những dự án văn hóa có giá trị lâu dài.</b>\nCultural Projects Cultural IP Festivals Cultural Event Brand Experiences",
 
   "wings_do_title": "Bạn có thể làm gì với Wings?",
   "wings_do_1_title": "Brand Foundation",
@@ -96,7 +96,7 @@
   "footer_address": "270F Võ Thị Sáu, phường Xuân Hòa, Tp.Hồ Chí Minh",
   "footer_copyright": "Wings Innovation Hub phát triển từ Truyền thông Đôi Cánh (Wings Media)",
   "footer_back_top": "Lên đầu trang",
-  "_note_about": "---------------------------TRANG ABOUT END----------------------------- ---",
+  "note_about": "---------------------------TRANG ABOUT END----------------------------- ---",
 
   "_note_blog": "---------------------------- TRANG BLOG------------------ ---",
   "blog_1_title": "Cách đạt được những góc nhìn thú vị",

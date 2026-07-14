@@ -372,7 +372,7 @@ h6 {
   font-size: 25px;
   color: #555555;
   line-height: 130%;
-  width: 97%;
+  width: 111%;
   text-align: justify;
 }
 @media (max-width: 480px) {
@@ -381,7 +381,7 @@ h6 {
   }
 }
 .mil-text-1 {
-  font-size: 15px;
+  font-size: 17px;
   color: #555555;
   line-height: 130%;
   width: 97%;
@@ -393,9 +393,10 @@ h6 {
 }
 
 .text-title {
-  font-size: 33px;
+  font-size: 30px;
   white-space: nowrap;
   line-height: normal;
+  margin-left: -80px;
 }
 @media (max-width: 768px) {
   .text-title {
@@ -408,12 +409,13 @@ h6 {
   }
 }
 .text-exp {
-  font-size: 25px;
+  font-size: 20px;
   margin-top: 20px;
   line-height: 130%;
   font-weight: 400;
   width: 145%;
   text-align: justify;
+  margin-left: -80px;
 }
 @media (max-width: 768px) {
   .text-exp {
@@ -549,6 +551,9 @@ h6 {
   .mil-fs42 {
     font-size: 18px;
   }
+}
+.mil-fs25 {
+  font-size: 25px;
 }
 /* SIGNATURE PROJECT */
 /* Container bọc ngoài */
@@ -965,19 +970,18 @@ buttons
   cursor: pointer;
   border-radius: 60px;
   padding: 0 20px;
-  height: 30px;
+  height: 40px;
   background-color: #002fa7;
   color: #efe9de;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 17px;
   font-weight: 600;
   letter-spacing: 2px;
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
   margin-top: 10px;
-  margin-left: 80px;
 }
 @media (max-width: 768px) {
   .mil-btn {
@@ -1212,6 +1216,12 @@ h6 .mil-text-link:after {
 spaces
 
 ------------------------------------------- */
+.mil-mt10 {
+  margin-top: 10px;
+}
+.mil-mb10 {
+  margin-bottom: 10px;
+}
 .mil-mb120 {
   margin-bottom: 120px;
 }
@@ -1328,7 +1338,7 @@ spaces
 
 .mil-p-30-120 {
   padding-top: 30px;
-  /* padding-bottom: 120px; */
+  padding-bottom: 120px;
 }
 @media (max-width: 480px) {
   .mil-p-30-120 {
@@ -1339,7 +1349,10 @@ spaces
   padding-top: 30px;
   padding-bottom: 90px;
 }
-
+.mil-p-30-0 {
+  padding-top: 30px;
+  padding-bottom: 0px;
+}
 .mil-p-0-30 {
   margin-bottom: 30px;
 }
@@ -1351,7 +1364,7 @@ spaces
 
 .mil-p-120-0 {
   padding-top: 78px;
-  margin-left: 40px;
+
   padding-right: 10px;
 }
 @media (max-width: 480px) {
@@ -1565,7 +1578,7 @@ top panel
     box-shadow 0.3s ease;
 }
 .mil-top-panel.scrolled {
-  background: rgba(246, 244, 239, 0.95);
+  background: #efe9de;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -2319,12 +2332,12 @@ counters
 }
 
 .mil-exp-box-2 {
-  padding-top: 30px;
+  padding: 6px 0 0 0;
   position: relative;
   background-color: #002fa7;
   padding-bottom: 50px;
-  width: 110%;
-  margin-top: 70px;
+  width: 300px;
+  height: 300px;
 }
 @media (max-width: 480px) {
   .mil-exp-box-2 {
@@ -2337,7 +2350,7 @@ counters
 .font-exp {
   font-weight: 100;
   font-family: "Canela";
-  font-size: 20px;
+  font-size: 15px;
 }
 @media (max-width: 480px) {
   .font-exp {
@@ -2357,7 +2370,7 @@ counters
 .font-exp-2 {
   font-weight: 600;
   font-family: "Canela";
-  font-size: 33px;
+  font-size: 28px;
 }
 @media (max-width: 480px) {
   .font-exp-2 {
@@ -2367,7 +2380,7 @@ counters
 .font-exp-3 {
   font-weight: 700;
   font-family: "Canela";
-  font-size: 60px;
+  font-size: 50px;
   margin-top: 5px;
 }
 @media (max-width: 480px) {
@@ -2391,13 +2404,13 @@ counters
 } */
 .mil-exp-box-2 .mil-exp-content .mil-exp-number {
   text-align: start;
-  line-height: normal;
+  line-height: initial;
   color: #efe9de;
-  margin-left: 20px;
-  font-size: 40px;
+  margin: 15px;
+  font-size: 50px;
   font-weight: 600;
   position: relative;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 /* .mil-exp-box-2.mil-type-2:before {
   content: "";
@@ -2875,23 +2888,74 @@ about
   }
 }
 .mil-about-text {
+  display: grid;
+  place-items: center; /* Tự động căn giữa cả ngang và dọc cho phần tử con */
+  width: 100%;
+  padding: 20px 0;
 }
-@media (min-width: 992px) {
-  .mil-about-text {
-    /* background: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.35) 0%,
-      rgba(0, 0, 0, 0) 60%
-    ); */
-    display: inline-block;
-    padding: 20px 0;
-    /* filter: brightness(1.6); */
-  }
-}
+
 @media (max-width: 480px) {
   .mil-about-text {
     padding-bottom: 0px;
   }
+}
+/* Khung bao bọc bên ngoài để hỗ trợ cuộn ngang trên điện thoại */
+.table-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  /* Màu nền xám nhạt mô phỏng theo ảnh gốc */
+  overflow-x: auto; /* Bật cuộn ngang cho Mobile */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Lưới CSS Grid 3 cột */
+.custom-grid-table {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cột độ rộng bằng nhau */
+  min-width: 700px; /* Đảm bảo bảng không bị ép quá nhỏ trên Mobile */
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+/* Định dạng chung cho từng ô (cell) */
+.cell {
+  padding: 20px 15px; /* Khoảng cách trên dưới 20px, trái phải 15px */
+  border-bottom: 1px solid #dcdcdc; /* Đường kẻ ngang mờ giữa các hàng */
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center; /* Canh giữa nội dung theo chiều dọc */
+}
+
+/* Bỏ đường kẻ ngang ở hàng cuối cùng cho đẹp mắt */
+.cell.no-border {
+  border-bottom: none;
+}
+
+/* Tiêu đề chính (XÂY DỰNG, KẾT NỐI, LAN TỎA) */
+.cell.main-header {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase; /* Viết hoa toàn bộ */
+  color: #4a4a4a;
+  border-bottom: 2px solid #cecece; /* Đường kẻ dưới tiêu đề chính đậm hơn một chút */
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tiêu đề phụ (Thương hiệu, Truyền thông, Văn hóa) */
+.cell.sub-header {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  padding-top: 25px; /* Cách xa đường kẻ phía trên một chút */
+  display: flex;
+  justify-content: center;
 }
 
 /* SÍgnature */
@@ -3566,8 +3630,8 @@ accordion
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; /* Chỉnh lại 100% để tự động khớp với cột */
-  padding: 16px 28px;
+  width: 90%; /* Chỉnh lại 100% để tự động khớp với cột */
+  padding: 10px 13px;
   border-radius: 50px; /* Bo góc viên thuốc thanh lịch hơn 150px */
   font-size: 20px;
   font-weight: 500;
@@ -3641,7 +3705,7 @@ accordion
   transition:
     max-height 0.4s ease-in-out,
     padding 0.4s ease;
-  padding: 0 28px; /* Khớp với padding của menu */
+  padding: 0 13px; /* Khớp với padding của menu */
 }
 
 /* Đoạn text bên trong */
