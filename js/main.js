@@ -650,7 +650,7 @@ window.addEventListener("scroll", function () {
     topPanel.classList.remove("scrolled");
   }
 });
-//----------------------------LOGO WINGS AND HEADER
+// ----------------------------LOGO WINGS AND HEADER
 // const header = document.querySelector(".mil-top-panel");
 // const logo = document.getElementById("header-logo");
 
@@ -741,3 +741,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ///////////////////////////////////////
+// SOLUTION RIGHT
+document.querySelectorAll(".solution-toggle").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    var wrap = btn.nextElementSibling;
+    var isOpen = btn.getAttribute("aria-expanded") === "true";
+
+    btn.setAttribute("aria-expanded", String(!isOpen));
+
+    if (!isOpen) {
+      wrap.style.maxHeight = wrap.scrollHeight + "px";
+    } else {
+      wrap.style.maxHeight = null;
+    }
+  });
+});
