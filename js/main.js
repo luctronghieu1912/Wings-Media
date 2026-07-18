@@ -87,70 +87,12 @@ document.addEventListener("DOMContentLoaded", function () {
     accordion
 
     ------------------------------------------- */
-  // let groups = gsap.utils.toArray(".mil-accordion-group");
-  // let menus = gsap.utils.toArray(".mil-accordion-menu");
-  // let menuToggles = groups.map(createAnimation);
-
-  // menus.forEach((menu) => {
-  //   menu.addEventListener("click", () => toggleMenu(menu));
-  // });
-
-  // function toggleMenu(clickedMenu) {
-  //   menuToggles.forEach((toggleFn) => toggleFn(clickedMenu));
-  // }
-
-  // function createAnimation(element) {
-  //   let menu = element.querySelector(".mil-accordion-menu");
-  //   let box = element.querySelector(".mil-accordion-content");
-
-  //   gsap.set(box, {
-  //     height: "auto",
-  //   });
-
-  //   let animation = gsap
-  //     .from(box, {
-  //       height: 0,
-  //       duration: 0.5,
-  //       ease: "sine",
-  //       onComplete: () => {
-  //         ScrollTrigger.refresh();
-  //       },
-  //     })
-  //     .reverse();
-
-  //   let lastActiveMenu = null;
-
-  //   return function (clickedMenu) {
-  //     if (clickedMenu === menu) {
-  //       let isOpen = animation.reversed();
-  //       animation.reversed(!isOpen);
-
-  //       if (isOpen) {
-  //         if (lastActiveMenu && lastActiveMenu !== menu) {
-  //           lastActiveMenu.classList.remove("mil-active");
-  //         }
-  //         menu.classList.add("mil-active");
-  //         lastActiveMenu = menu;
-  //       } else {
-  //         menu.classList.remove("mil-active");
-  //       }
-  //     } else {
-  //       animation.reverse();
-  //       if (lastActiveMenu) {
-  //         lastActiveMenu.classList.remove("mil-active");
-  //       }
-  //       clickedMenu.classList.add("mil-active");
-  //       lastActiveMenu = clickedMenu;
-  //     }
-  //   };
-  // }
   // Chạy thẳng luôn, không cần bọc trong document.addEventListener("DOMContentLoaded", ...)
   const accordionMenus = document.querySelectorAll(".mil-accordion-menu");
 
   accordionMenus.forEach((menu) => {
     menu.addEventListener("click", function (e) {
       e.preventDefault();
-      console.log("Bạn vừa click vào menu!");
 
       // Xóa class active ở các tab khác
       accordionMenus.forEach((otherMenu) => {
@@ -271,16 +213,18 @@ document.addEventListener("DOMContentLoaded", function () {
       section,
       {
         opacity: 0,
-        y: 60,
-        scale: 0.96,
-        ease: "sine",
+        y: 100, // Tăng từ 60 -> 100
+        scale: 0.9, // Giảm từ 0.96 -> 0.9
       },
       {
-        y: 0,
         opacity: 1,
+        y: 0,
         scale: 1,
+        duration: 1.2, // Thêm duration
+        ease: "power3.out", // Đổi ease
         scrollTrigger: {
           trigger: section,
+          start: "top 85%", // Bắt đầu sớm hơn
           toggleActions: "play none none reverse",
         },
       },
@@ -374,137 +318,13 @@ document.addEventListener("DOMContentLoaded", function () {
     sliders
 
     ------------------------------------------- */
-  var swiper = new Swiper(".mil-reviews-slider", {
-    parallax: true,
-    autoHeight: true,
-    slidesPerView: 1,
-    spaceBetween: 30,
-    speed: 800,
-    navigation: {
-      prevEl: ".mil-reviews-nav .mil-prev",
-      nextEl: ".mil-reviews-nav .mil-next",
-    },
-    on: {
-      slideChangeTransitionEnd: function () {
-        ScrollTrigger.refresh();
-      },
-    },
-  });
 
-  var swiper = new Swiper(".mil-portfolio-slider", {
-    parallax: true,
-    autoHeight: true,
-    initialSlide: 1,
-    slidesPerView: 1,
-    spaceBetween: 30,
-    speed: 800,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    scrollbar: {
-      el: ".mil-pagination",
-    },
-    on: {
-      slideChangeTransitionEnd: function () {
-        ScrollTrigger.refresh();
-      },
-    },
-  });
-
-  var swiper = new Swiper(".mil-portfolio-fs-slider", {
-    parallax: true,
-    slidesPerView: 1,
-    spaceBetween: 30,
-    speed: 800,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    breakpoints: {
-      992: {},
-    },
-    mousewheel: {
-      sensitivity: 1,
-    },
-  });
-  var swiper = new Swiper(".mil-portfolio-fs-slider-2", {
-    parallax: true,
-    slidesPerView: 1,
-    spaceBetween: 30,
-    speed: 800,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    navigation: {
-      prevEl: ".mil-port-nav .mil-prev",
-      nextEl: ".mil-port-nav .mil-next",
-    },
-    breakpoints: {
-      992: {},
-    },
-    mousewheel: {
-      sensitivity: 1,
-    },
-  });
-
-  var swiper = new Swiper(".mil-store-slider", {
-    parallax: true,
-    slidesPerView: 1,
-    spaceBetween: 30,
-    speed: 800,
-    breakpoints: {
-      992: {},
-    },
-  });
-
-  var swiper = new Swiper(".mil-about-content-slider", {
-    parallax: true,
-    autoHeight: true,
-    slidesPerView: 1,
-    spaceBetween: 30,
-    speed: 800,
-    scrollbar: {
-      el: ".mil-about-content-pagination",
-    },
-    on: {
-      slideChangeTransitionEnd: function () {
-        ScrollTrigger.refresh();
-      },
-    },
-  });
   /* -------------------------------------------
 
     progressbar
 
     ------------------------------------------- */
 
-  const progressBars = document.querySelectorAll(".mil-prog");
-
-  progressBars.forEach((progressBar) => {
-    const widthPercentage = progressBar.getAttribute("data-number");
-    gsap.fromTo(
-      progressBar,
-      {
-        ease: "sine",
-        width: "0%",
-      },
-      {
-        width: `${widthPercentage}%`,
-        scrollTrigger: {
-          trigger: progressBar,
-          toggleActions: "play none none reverse",
-          once: true,
-        },
-        duration: 2,
-        ease: "sine",
-      },
-    );
-  });
   /* -------------------------------------------
 
     price
@@ -534,58 +354,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // service
-
-document.addEventListener("DOMContentLoaded", function () {
-  var swiper = new Swiper(".myServiceSlider", {
-    loop: true,
-    speed: 1000, // Tốc độ chuyển ảnh (800ms giúp cảm giác mượt, không quá nhanh)
-    grabCursor: true, // Hiện con trỏ bàn tay khi rê chuột vào để báo hiệu có thể kéo
-    allowTouchMove: true, // Cho phép vuốt tay/kéo chuột
-    parallax: true, // Tạo hiệu ứng chiều sâu khi trượt nếu cần
-
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false, // QUAN TRỌNG: Vuốt tay xong nó vẫn tự chạy tiếp
-      pauseOnMouseEnter: true, // Dừng lại một chút khi khách rê chuột vào xem
-    },
-
-    // Thay đổi hiệu ứng từ 'fade' sang 'slide' để thấy rõ chuyển động trượt bằng tay
-    effect: "slide",
-
-    // Cấu hình lực quán tính khi vuốt tay
-    touchRatio: 1,
-    touchAngle: 45,
-    resistanceRatio: 0.5,
-
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true, // Các chấm nhỏ dần trông rất hiện đại
-    },
-  });
-});
-document.addEventListener("DOMContentLoaded", function () {
-  new Swiper(".mil-blog-slider", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    speed: 800,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    pagination: {
-      el: ".mil-slider-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      // Khi màn hình >= 992px (Desktop)
-      992: {
-        slidesPerView: 2,
-      },
-    },
-  });
-});
 
 //------------------LANG-------------------
 // Hàm chính để tải và áp dụng ngôn ngữ
@@ -650,37 +418,7 @@ window.addEventListener("scroll", function () {
     topPanel.classList.remove("scrolled");
   }
 });
-// ----------------------------LOGO WINGS AND HEADER
-// const header = document.querySelector(".mil-top-panel");
-// const logo = document.getElementById("header-logo");
 
-// if (header && logo) {
-//   window.addEventListener("scroll", () => {
-//     if (window.scrollY > 50) {
-//       header.classList.add("scrolled");
-
-//       if (!logo.src.includes("logo-wings-blue.png")) {
-//         logo.style.opacity = "0";
-
-//         setTimeout(() => {
-//           logo.src = "./img/logos/logo-wings-blue.png";
-//           logo.style.opacity = "1";
-//         }, 150);
-//       }
-//     } else {
-//       header.classList.remove("scrolled");
-
-//       if (!logo.src.includes("logo-wings-white.png")) {
-//         logo.style.opacity = "0";
-
-//         setTimeout(() => {
-//           logo.src = "./img/logos/logo-wings-white.png";
-//           logo.style.opacity = "1";
-//         }, 150);
-//       }
-//     }
-//   });
-// }
 //------------------------- SIGNATURE PROJECT///
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".counter");
@@ -756,3 +494,42 @@ document.querySelectorAll(".solution-toggle").forEach(function (btn) {
     }
   });
 });
+
+/* -------------------------------------------
+ 
+    press slider (Đôi Cánh trên báo chí) — Embla Carousel
+ 
+    ------------------------------------------- */
+var pressEmblaNode = document.querySelector(".mil-press-embla");
+
+if (pressEmblaNode && typeof EmblaCarousel !== "undefined") {
+  var pressViewport = pressEmblaNode.querySelector(".embla__viewport");
+
+  var pressAutoplay =
+    typeof EmblaCarouselAutoplay !== "undefined"
+      ? EmblaCarouselAutoplay({
+          delay: 2500,
+          stopOnMouseEnter: true, // dừng khi hover
+          stopOnInteraction: false, // kéo xong tự chạy tiếp
+        })
+      : undefined;
+
+  var pressEmbla = EmblaCarousel(
+    pressViewport,
+    {
+      loop: true,
+      align: "start",
+      dragFree: false,
+      containScroll: "trimSnaps",
+    },
+    pressAutoplay ? [pressAutoplay] : [],
+  );
+
+  /* Con trỏ "grab/grabbing" khi kéo */
+  pressEmbla.on("pointerDown", function () {
+    pressViewport.classList.add("is-dragging");
+  });
+  pressEmbla.on("pointerUp", function () {
+    pressViewport.classList.remove("is-dragging");
+  });
+}

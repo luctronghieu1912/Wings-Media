@@ -201,7 +201,7 @@ body {
   content: "";
   width: 50px;
   height: 50px;
-  background-image: url("../img/logos/logoweb.webp");
+  background-image: url("../img/logos/logo-wings-white.png");
   background-size: cover; /* ảnh tự fit */
   background-position: center; /* căn giữa */
   background-repeat: no-repeat;
@@ -217,7 +217,7 @@ body {
 }
 
 .mil-accent-section {
-  background-color: #ccbea5;
+  background-color: #01102b;
 }
 
 .mil-out-section {
@@ -376,10 +376,8 @@ h6 {
 }
 .mil-text {
   font-size: 25px;
-  color: #555555;
+  color: white;
   line-height: 130%;
-  width: 111%;
-  text-align: justify;
 }
 @media (max-width: 480px) {
   .mil-text {
@@ -684,7 +682,7 @@ h6 {
 }
 
 .mil-light {
-  color: #555555;
+  color: #ffffff;
 }
 
 .mil-dark {
@@ -824,21 +822,11 @@ cursor
 .mil-cursor-follower.mil-view-active,
 .mil-cursor-follower.mil-next-active,
 .mil-cursor-follower.mil-read-active,
-.mil-cursor-follower.mil-swipe-active {
-  background-color: #b89b5e;
-  transform: scale(3);
-  filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.25));
-}
 .mil-cursor-follower.mil-dark-active:after,
 .mil-cursor-follower.mil-gone-active:after,
 .mil-cursor-follower.mil-view-active:after,
 .mil-cursor-follower.mil-next-active:after,
 .mil-cursor-follower.mil-read-active:after,
-.mil-cursor-follower.mil-swipe-active:after {
-  transition-delay: 0.2s;
-  opacity: 1;
-  transform: scale(0.33);
-}
 .mil-cursor-follower.mil-dark-active {
   background-color: #0a0b0f;
 }
@@ -862,18 +850,11 @@ cursor
 .mil-cursor-follower.mil-read-active:after {
   content: "read";
 }
-.mil-cursor-follower.mil-swipe-active:after {
-  content: url('data:image/svg+xml,<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M29.4364 14.3667C29.4101 14.342 29.3824 14.3188 29.3535 14.2972L24.653 9.59663C24.5636 9.50467 24.4568 9.4314 24.3389 9.38106C24.2209 9.33073 24.0941 9.30434 23.9659 9.30344C23.8376 9.30253 23.7105 9.32712 23.5918 9.37578C23.4732 9.42444 23.3654 9.4962 23.2747 9.58689C23.184 9.67757 23.1122 9.78538 23.0636 9.90404C23.0149 10.0227 22.9903 10.1498 22.9912 10.2781C22.9921 10.4063 23.0185 10.5331 23.0688 10.6511C23.1192 10.7691 23.1925 10.8758 23.2844 10.9652L26.4226 14.1034L3.72315 14.1034L6.86129 10.9652C6.9541 10.8749 7.02784 10.7669 7.07815 10.6476C7.12846 10.5283 7.15432 10.4001 7.1542 10.2706C7.15408 10.1411 7.12797 10.013 7.07743 9.89378C7.02688 9.77456 6.95293 9.6667 6.85996 9.57659C6.67587 9.39817 6.42852 9.30007 6.17218 9.30383C5.91585 9.30759 5.67147 9.41289 5.4927 9.59663L0.806869 14.2825C0.68112 14.372 0.578597 14.4902 0.507853 14.6274C0.43711 14.7646 0.400197 14.9167 0.400197 15.071C0.400197 15.2253 0.437109 15.3775 0.507853 15.5146C0.578596 15.6518 0.68112 15.7701 0.806869 15.8596L5.4927 20.5454C5.58209 20.6373 5.68888 20.7106 5.80684 20.761C5.9248 20.8113 6.05158 20.8377 6.17983 20.8386C6.30808 20.8395 6.43522 20.8149 6.55389 20.7662C6.67255 20.7176 6.78035 20.6458 6.87104 20.5551C6.96173 20.4644 7.03348 20.3566 7.08214 20.238C7.1308 20.1193 7.15539 19.9922 7.15449 19.8639C7.15358 19.7357 7.12719 19.6089 7.07686 19.4909C7.02653 19.373 6.95325 19.2662 6.86129 19.1768L3.72315 16.0386L26.4226 16.0386L23.2844 19.1768C23.1925 19.2662 23.1192 19.373 23.0688 19.4909C23.0185 19.6089 22.9921 19.7357 22.9912 19.8639C22.9903 19.9922 23.0149 20.1193 23.0636 20.238C23.1122 20.3566 23.184 20.4644 23.2747 20.5551C23.3654 20.6458 23.4732 20.7176 23.5918 20.7662C23.7105 20.8149 23.8376 20.8395 23.9659 20.8386C24.0941 20.8377 24.2209 20.8113 24.3389 20.761C24.4568 20.7106 24.5636 20.6373 24.653 20.5454L29.3562 15.8422C29.4684 15.7573 29.5607 15.649 29.6267 15.5248C29.6927 15.4006 29.7309 15.2635 29.7385 15.123C29.7461 14.9826 29.7231 14.8421 29.6709 14.7115C29.6187 14.5809 29.5387 14.4632 29.4364 14.3667Z" fill="black"/></svg>');
-  margin-top: 1px;
-}
+
 @media (max-width: 768px) {
   .mil-cursor-follower {
     display: none;
   }
-}
-
-.mil-c-swipe {
-  cursor: grab;
 }
 
 /* -------------------------------------------
@@ -1136,8 +1117,8 @@ link
 ------------------------------------------- */
 .btn-now {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #002fa7; /* Màu nền gốc giống trong ảnh */
+  padding: 0px 14px;
+  background-color: white; /* Màu nền gốc giống trong ảnh */
   color: #01102b;
   text-decoration: none;
   border-radius: 50px;
@@ -1647,7 +1628,7 @@ menu button
 .mil-top-panel.scrolled .mil-menu-btn span,
 .mil-top-panel.scrolled .mil-menu-btn span::before,
 .mil-top-panel.scrolled .mil-menu-btn span::after {
-  background: #2b2b2b;
+  background: white;
 }
 .mil-menu-btn span {
   position: relative;
@@ -1857,150 +1838,7 @@ social
 portfolio
 
 ------------------------------------------- */
-.mil-project-card {
-  width: 100%;
-  display: block;
-  position: relative;
-  overflow: hidden;
-}
-.mil-project-card .mil-cover-frame {
-  width: 100%;
-  position: relative;
-}
-.mil-project-card .mil-cover-frame.mil-v {
-  padding-bottom: 120%;
-}
-.mil-project-card .mil-cover-frame.mil-v.mil-longer {
-  padding-bottom: 150%;
-}
-.mil-project-card .mil-cover-frame.mil-s {
-  padding-bottom: 100%;
-}
-.mil-project-card .mil-cover-frame.mil-h {
-  padding-bottom: 56.25%;
-}
-.mil-project-card .mil-cover-frame.mil-h.mil-longer {
-  padding-bottom: 75%;
-}
-.mil-project-card .mil-cover-frame.mil-h.mil-shortened {
-  padding-bottom: 55%;
-}
-.mil-project-card .mil-cover-frame .mil-hover-frame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
-}
-.mil-project-card .mil-cover-frame .mil-hover-frame img {
-  object-fit: cover;
-  object-position: center top;
-  width: 100%;
-  height: 100%;
-}
-.mil-project-card .mil-cover-frame .mil-hover-overlay {
-  background-color: rgba(10, 11, 15, 0.6);
-  opacity: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
-}
-.mil-project-card .mil-cover-frame .mil-hover-overlay .mil-addition-btn {
-  background-color: #002664;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  color: #0a0b0f;
-}
-.mil-project-card:hover .mil-cover-frame .mil-hover-frame {
-  transform: scale(0.95);
-}
-.mil-project-card:hover .mil-cover-frame .mil-hover-overlay {
-  opacity: 1;
-}
 
-.mil-project-btn-frame {
-  padding-bottom: 59%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.mil-project-btn-frame .mil-btn {
-  position: absolute;
-  top: calc(50% - 30px);
-  left: auto;
-  right: auto;
-  bottom: auto;
-}
-@media (max-width: 992px) {
-  .mil-project-btn-frame {
-    padding-bottom: 79%;
-  }
-}
-@media (max-width: 768px) {
-  .mil-project-btn-frame {
-    padding-bottom: 0;
-    padding-top: 60px;
-  }
-  .mil-project-btn-frame .mil-btn {
-    position: static;
-  }
-}
-
-.mil-half-project-card {
-  display: block;
-  width: 100%;
-  background-color: red;
-}
-
-.mil-filter a * {
-  transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
-}
-.mil-filter a *:hover {
-  color: #b89b5e;
-}
-.mil-filter a *.mil-active * {
-  color: #b89b5e;
-}
-
-.mil-more-loader {
-  margin-top: 90px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.mil-more-loader.mil-mt-60 {
-  margin-top: 60px;
-}
-.mil-more-loader .mil-loader {
-  margin-bottom: 30px;
-  animation: loader 1s infinite;
-}
-.mil-more-loader .mil-loader path {
-  fill: #ffffff;
-}
-
-@keyframes loader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 /* -------------------------------------------
 
 fullscreen slider
@@ -2012,38 +1850,12 @@ fullscreen slider
   display: flex;
   align-items: center;
 }
-.mil-portfolio-fs-slider .swiper-slide-next {
-  z-index: -1;
-}
-.mil-portfolio-fs-slider .swiper-slide-next .mil-cover {
-  opacity: 1 !important;
-}
-.mil-portfolio-fs-slider .swiper-slide-prev {
-  opacity: 0;
-  transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
-}
-@media (max-width: 992px) {
-  .mil-portfolio-fs-slider {
-    padding: 0;
-  }
-}
 
 .mil-portfolio-fs-slider-2 {
   height: 100vh;
   padding: 120px 0;
   display: flex;
   align-items: center;
-}
-.mil-portfolio-fs-slider-2 .swiper-slide-next {
-  z-index: -1;
-}
-.mil-portfolio-fs-slider-2 .swiper-slide-next .mil-cover {
-  opacity: 1 !important;
-}
-@media (max-width: 992px) {
-  .mil-portfolio-fs-slider-2 {
-    padding: 0;
-  }
 }
 
 .mil-portfolio-slide {
@@ -2138,12 +1950,6 @@ fullscreen slider
 }
 .mil-port-nav .mil-port-btn:last-child {
   margin-right: 0;
-}
-.mil-port-nav .mil-port-btn.swiper-button-disabled {
-  background-color: transparent;
-  border: solid 2px #73767b;
-  color: #73767b;
-  cursor: not-allowed;
 }
 
 .mil-ct-frame {
@@ -2616,16 +2422,6 @@ blog
 }
 
 /* Tùy chỉnh màu sắc các chấm nếu ông muốn (Optional) */
-.mil-blog-slider .swiper-pagination-bullet {
-  background: #ccc; /* Màu khi chưa chọn */
-  opacity: 1;
-}
-
-.mil-blog-slider .swiper-pagination-bullet-active {
-  background: #ff5e00; /* Màu khi đang ở slide đó (màu accent của ông) */
-  width: 20px; /* Làm cho chấm đang chọn dài ra một chút cho xịn */
-  border-radius: 4px;
-}
 
 /* -------------------------------------------
 
@@ -2795,10 +2591,6 @@ slider
   margin-top: 30px;
   background-color: rgba(115, 118, 123, 0.2);
 }
-.mil-pagination .swiper-scrollbar-drag {
-  background-color: #002fa7;
-  height: 5px;
-}
 
 .mil-slider-btn {
   cursor: pointer;
@@ -2815,10 +2607,7 @@ slider
 .mil-slider-btn.mil-prev {
   transform: rotate(180deg);
 }
-.mil-slider-btn.swiper-button-disabled {
-  opacity: 0.2;
-  pointer-events: none;
-}
+
 .mil-slider-btn:hover svg path {
   fill: #b89b5e;
 }
@@ -3070,23 +2859,6 @@ about
   width: 100%;
   height: 100%;
 }
-.mil-about-content-slider .swiper-wrapper {
-  width: 100%;
-  height: 100%;
-}
-.mil-about-content-slider .swiper-slide {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.mil-about-content-slider .swiper-slide img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 .mil-content-box .mil-cb-image {
   position: relative;
@@ -3163,11 +2935,12 @@ brands
 .partner-slider {
   width: 100%;
   overflow: hidden;
-  padding: 40px 0;
 
   /* Tùy chỉnh màu nền */
+  background-color: white;
   position: relative;
   display: flex;
+  margin-top: 30px;
 }
 
 /* Track chứa logo chạy ngang */
@@ -3189,7 +2962,7 @@ brands
 }
 
 .partner-item img {
-  height: 200px; /* Độ cao logo trên PC */
+  height: 100px; /* Độ cao logo trên PC */
   width: auto;
   object-fit: contain;
   display: block;
@@ -3240,7 +3013,7 @@ brands
 /* Responisve cho Mobile */
 @media (max-width: 768px) {
   .partner-slider {
-    padding: 0px 0;
+    padding: 0;
   }
 
   .partner-track {
@@ -3250,7 +3023,7 @@ brands
   }
 
   .partner-item img {
-    height: 200px; /* Logo nhỏ lại cho vừa màn hình mobile */
+    height: 80px; /* Logo nhỏ lại cho vừa màn hình mobile */
     max-width: 120px;
   }
   .partner-slider::before,
@@ -3482,12 +3255,6 @@ services
 }
 
 /* Ép ảnh bên trong phải hiện */
-.myServiceSlider .swiper-slide {
-  opacity: 1 !important;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-}
 
 .myServiceSlider img {
   width: 100% !important;
@@ -3499,26 +3266,7 @@ services
   user-select: none; /* Ngăn việc bị bôi đen ảnh khi đang kéo tay */
   -webkit-user-drag: none;
 }
-.swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background: #ccc;
-  opacity: 1;
-}
-.swiper-pagination-bullet-active {
-  background: #002fa7 !important; /* Màu của Wings */
-  width: 25px; /* Kéo dài chấm đang chọn ra một chút (kiểu hiện đại) */
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-/* Đưa dấu chấm chuyển trang lên trên cùng để dễ thấy */
-.swiper-pagination {
-  z-index: 99;
-  bottom: 20px !important;
-}
-.myServiceSlider .swiper-wrapper {
-  transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1) !important;
-}
+
 @media (max-width: 768px) {
   .myServiceSlider {
     width: 100% !important;
@@ -3530,11 +3278,6 @@ services
     overflow: visible !important; /* Để lộ dấu chấm ra ngoài nếu cần */
   }
 
-  .myServiceSlider .swiper-slide {
-    width: 100% !important;
-    height: 100% !important;
-  }
-
   .myServiceSlider img {
     width: 100% !important;
     height: 100% !important;
@@ -3544,13 +3287,6 @@ services
   }
 
   /* Đưa dấu chấm xuống dưới hẳn khung ảnh */
-  .swiper-pagination {
-    bottom: -30px !important;
-  }
-
-  .swiper-pagination-bullet-active {
-    background: #002fa7 !important;
-  }
 }
 
 /* -------------------------------------------
@@ -3643,7 +3379,7 @@ accordion
 }
 @media (max-width: 768px) {
   .partner-slider {
-    padding: 20px 0;
+    padding: 0;
   }
 }
 @media (max-width: 480px) {
@@ -4164,7 +3900,6 @@ h1.headline {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: white;
-  margin-top: 0;
 }
 
 .subtitle {
@@ -4188,7 +3923,6 @@ h1.headline {
   line-height: 1.75;
   color: white;
   max-width: 460px;
-  margin: 0;
 }
 .desc .accent {
   color: #3974e1;
@@ -4298,7 +4032,7 @@ h1.headline {
   color: transparent;
   display: flex;
   align-items: flex-start;
-  /*  */
+  margin-left: 50px;
 }
 
 .hero-plus {
@@ -4348,7 +4082,7 @@ h1.headline {
 .hero-desc {
   font-size: 1.02rem;
   line-height: 1.75;
-  color: rgba(244, 242, 236, 0.85);
+  color: white;
   max-width: 520px;
   margin-bottom: 40px;
 }
@@ -4363,8 +4097,8 @@ h1.headline {
   font-size: 0.85rem;
   font-weight: 500;
   line-height: 1.4;
-  color: rgba(244, 242, 236, 0.9);
-  padding: 0 24px;
+  color: white;
+  padding: 0 20px;
   border-right: 1px solid rgba(255, 255, 255, 0.25);
 }
 
@@ -4375,11 +4109,74 @@ h1.headline {
 .hero-tags span:last-child {
   border-right: none;
 }
+.hero-tags-0 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
 
+.hero-tags-0 span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: white;
+  padding: 0 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.hero-tags-0 span:first-child {
+  padding-left: 0;
+}
+
+.hero-tags-0 span:last-child {
+  border-right: none;
+}
+.hero-tags-1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.hero-tags-1 span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: rgba(244, 242, 236, 0.9);
+  padding: 0 22px;
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+.hero-tags-1 span:first-child {
+  padding-left: 0;
+}
+
+.hero-tags-1 span:last-child {
+  border-right: none;
+}
+.hero-tags-2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.hero-tags-2 span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: rgba(244, 242, 236, 0.9);
+  padding: 0 16px;
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+.hero-tags-2 span:first-child {
+  padding-left: 0;
+}
+
+.hero-tags-2 span:last-child {
+  border-right: none;
+}
 @media (max-width: 991.98px) {
   .hero-section {
     min-height: auto;
-    padding: 60px 0;
+    padding: 20px 0;
   }
   .hero-bg-image {
     left: 0;
@@ -4394,24 +4191,44 @@ h1.headline {
     );
   }
   .hero-number-col {
-    justify-content: flex-start;
-    margin-bottom: 20px;
+    justify-content: center;
+    margin-bottom: 0px;
   }
   .hero-number {
-    font-size: 6rem;
+    font-size: 12rem;
   }
   .hero-plus {
     font-size: 2.7rem;
+    margin-top: 80px;
   }
   .hero-divider-col {
     display: none !important;
   }
   .hero-title {
     font-size: 2.3rem;
+    text-align: center;
+    margin: 0;
+  }
+  .hero-line {
+    display: none;
   }
   .hero-desc {
     font-size: 0.95rem;
     max-width: none;
+    text-align: center;
+  }
+  .hero-tags {
+    margin-left: 136px;
+  }
+  .hero-tags-0 span {
+    padding: 0 6px;
+    font-size: 11px;
+  }
+  .hero-tags-1 span {
+    padding: 0 18px;
+  }
+  .hero-tags-2 span {
+    padding: 0 7px;
   }
 }
 
@@ -4444,6 +4261,7 @@ h1.headline {
 
 /* ----------------------- */
 /* Milestones section */
+
 .milestones-title {
   font-family: "Playfair Display", serif;
   font-weight: 400;
@@ -4453,45 +4271,56 @@ h1.headline {
   letter-spacing: 0.5px;
   margin-bottom: 20px;
   color: white;
+  margin-top: 0;
 }
 
 .milestones-desc {
-  font-size: 0.95rem;
+  font-size: 1.02rem;
   line-height: 1.6;
   color: white;
   max-width: 320px;
   margin-bottom: 0;
 }
 
-.milestone-line {
-  border: none;
-  border-top: 1px solid white;
-  opacity: 1;
-  margin: 0 0 24px 0;
-  width: 90%;
+.milestones-bar-line {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 40px;
 }
 
-.milestone-text {
-  font-size: 1.4rem;
-  line-height: 1.4;
-  color: white;
+.milestones-bar-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.milestone-bar-item {
+  flex: 1 1 0;
+  min-width: 150px;
+  padding: 0 28px;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+}
+
+.milestone-bar-item:first-child {
+  padding-left: 0;
+}
+
+.milestone-bar-item:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.milestone-bar-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #f4f2ec;
   margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-  .milestones-title {
-    font-size: 2.6rem;
-  }
-  .milestone-text {
-    font-size: 1.15rem;
-  }
 }
 
 /* ---------------- */
 /* Solutions section */
 .solutions-section {
   background: var(--hero-bg);
-  padding: 100px 0;
+  padding: 100px 0 0 0;
 }
 
 .solutions-title {
@@ -4573,7 +4402,7 @@ h1.headline {
 
 .solution-title {
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #f4f2ec;
@@ -4610,6 +4439,234 @@ h1.headline {
   font-size: 0.95rem;
   color: rgba(244, 242, 236, 0.65);
   margin: 14px 0 0 0;
+}
+/* ============ PORTFOLIO SECTION ============ */
+.portfolio-section {
+  padding: 100px 0 0 0;
+}
+
+.portfolio-header {
+  margin-bottom: 50px;
+}
+
+.portfolio-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 0px;
+}
+
+.portfolio-desc {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 480px;
+  margin-bottom: 0;
+}
+
+.portfolio-cta-col {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-outline-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #b08a4e;
+  color: #8a6a38;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 26px;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn-outline-gold:hover {
+  background: #b08a4e;
+  color: #fff;
+}
+
+.btn-outline-gold .arrow {
+  font-size: 1rem;
+}
+
+.portfolio-grid {
+  margin-bottom: 60px;
+}
+
+.project-card {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  border-radius: 4px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0.15) 55%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+}
+
+.project-number {
+  position: absolute;
+  top: 22px;
+  left: 24px;
+  z-index: 2;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.project-arrow {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.project-card:hover .project-arrow {
+  background: #b08a4e;
+  border-color: #b08a4e;
+}
+
+.project-info {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 90px;
+  z-index: 2;
+}
+
+.project-category {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #d9b877;
+  margin-bottom: 8px;
+}
+
+.project-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+/* ============ PRESS SECTION ============ */
+/* ============================================================
+   Embla Carousel — CSS cho phần "Đôi Cánh trên báo chí"
+   Thêm khối này vào style.css, XÓA các rule .press-scroll /
+   .mil-press-slider cũ nếu còn (không dùng nữa)
+   ============================================================ */
+
+.press-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: white;
+}
+.mil-press-embla {
+  position: relative;
+}
+
+.mil-press-embla .embla__viewport {
+  overflow: hidden;
+  width: 100%;
+  cursor: grab;
+}
+
+.mil-press-embla .embla__viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.mil-press-embla .embla__container {
+  display: flex;
+  gap: 24px;
+  /* Embla dịch chuyển container bằng transform, không dùng margin-left âm
+     ở đây vì mình dùng "gap" (Embla hỗ trợ tốt flex-gap) */
+}
+
+.mil-press-embla .embla__slide {
+  flex: 0 0 340px;
+  min-width: 0;
+}
+
+.press-card {
+  width: 100%;
+  text-decoration: none;
+  display: block;
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.press-image {
+  width: 100%;
+  height: 220px;
+  border-radius: 4px;
+  background-size: cover;
+  background-position: top center;
+  background-color: #f5f4f2;
+  margin-bottom: 18px;
+  pointer-events: none; /* để không cản trở việc kéo */
+}
+
+.press-caption {
+  font-size: 14px;
+  line-height: 1.45;
+  color: rgba(244, 242, 236, 0.85);
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 575.98px) {
+  .mil-press-embla .embla__slide {
+    flex-basis: 260px;
+  }
+  .press-image {
+    height: 170px;
+  }
+  .press-caption {
+    font-size: 0.85rem;
+  }
 }
 
 /* Responsive */
@@ -4687,16 +4744,11 @@ h1.headline {
   .milestones-title {
     font-size: 3.2rem;
     text-align: center;
+    margin-top: 40px;
   }
 
   /* Section 3 — Solutions */
 
-  .quote-text {
-    font-size: 1.35rem;
-  }
-  .quote-mark {
-    font-size: 3.8rem;
-  }
   /* Section 3 — Solutions */
   .solutions-title {
     font-size: 4rem;
@@ -4717,12 +4769,20 @@ h1.headline {
   }
   .feature-text-nowrap {
   }
+  /* Section 4 — Portfolio */
+  .portfolio-title {
+    font-size: 2.5rem;
+  }
+  .portfolio-cta-col {
+    justify-content: flex-start;
+    margin-top: 24px;
+  }
 }
 
 /* ======================================================
    RESPONSIVE — Tablet portrait / large mobile (≤767.98px)
 ====================================================== */
-@media (max-width: 767.98px) {
+@media (max-width: 770.98px) {
   .container {
     padding-left: 24px;
     padding-right: 24px;
@@ -4777,10 +4837,14 @@ h1.headline {
   /* Section 2 — Milestones */
   .milestones-title {
     font-size: 2.4rem;
+    margin-right: 50px;
   }
+
   .milestones-desc {
     font-size: 0.9rem;
-    max-width: none;
+    max-width: 3000px;
+    text-align: center;
+    margin-right: 50px;
   }
   .milestone-text {
     font-size: 1.15rem;
@@ -4788,15 +4852,28 @@ h1.headline {
   .milestone-line {
     width: 100%;
   }
+  .milestone-bar-item:first-child {
+    padding-left: 28px;
+  }
 
-  /* Section 3 — Solutions */
+  .milestone-bar-item:last-child {
+    border-right: none;
+    padding-right: 29px;
+  }
+  .milestones-bar-row {
+    width: 97%;
+  }
 
   /* Section 3 — Solutions */
   .solutions-section {
     padding: 60px 0;
   }
   .solutions-title {
-    font-size: 3rem;
+    font-size: 6rem;
+    margin: 0;
+  }
+  .solution-item {
+    width: 87%;
   }
   .solution-title {
     font-size: 1.15rem;
@@ -4804,18 +4881,13 @@ h1.headline {
   .solution-desc {
     font-size: 0.9rem;
   }
+
   .solutions-tags {
     gap: 8px 20px;
     font-size: 0.8rem;
     margin-bottom: 20px;
   }
-  .quote-mark {
-    font-size: 3.2rem;
-  }
-  .quote-text {
-    font-size: 1.2rem;
-    max-width: none;
-  }
+
   .solutions-features {
     margin-top: 45px;
   }
@@ -4826,6 +4898,22 @@ h1.headline {
     border-top: 1px solid var(--line);
     padding: 20px 4px;
     margin-bottom: 0;
+  }
+  /* Section 4 — Portfolio */
+  .portfolio-section {
+    padding: 60px 0;
+  }
+  .portfolio-grid {
+    width: 97%;
+  }
+  .portfolio-title {
+    font-size: 2.1rem;
+  }
+  .portfolio-desc {
+    max-width: none;
+  }
+  .project-title {
+    font-size: 1.2rem;
   }
 }
 
@@ -4895,17 +4983,319 @@ h1.headline {
     font-size: 0.72rem;
     gap: 6px 16px;
   }
-  .quote-mark {
-    font-size: 2.6rem;
-  }
-  .quote-text {
-    font-size: 1.05rem;
-  }
+
   .feature-title {
     font-size: 1rem;
     margin-bottom: 12px;
   }
   .feature-text {
     font-size: 0.85rem;
+  }
+  /* Section 4 — Portfolio */
+  .portfolio-title {
+    font-size: 1.8rem;
+  }
+  .btn-outline-gold {
+    font-size: 0.72rem;
+    padding: 12px 20px;
+  }
+  .project-title {
+    font-size: 1.05rem;
+  }
+  .project-info {
+    right: 70px;
+  }
+  .project-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+  /* Section 5 — Press */
+  .press-title {
+    font-size: 3.2rem;
+
+    margin-bottom: 0px;
+  }
+  .press-card {
+    width: 260px;
+  }
+  .press-image {
+    height: 170px;
+  }
+  .press-caption {
+    font-size: 0.85rem;
+  }
+}
+/* ============================================================
+   FOOTER — thêm vào style.css (nên đặt cuối file)
+   ============================================================ */
+
+.site-footer {
+  background: var(--hero-bg);
+  padding: 90px 0 0 0;
+}
+
+.footer-top {
+  padding-bottom: 60px;
+}
+
+/* ---------- Left column ---------- */
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.footer-logo-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.footer-logo-icon {
+  width: 26px;
+  height: auto;
+}
+
+.footer-desc {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: white;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f4f2ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.footer-social a:hover {
+  background: #b08a4e;
+}
+
+.footer-menu h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #d9b877;
+  margin-bottom: 18px;
+}
+
+.footer-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-menu li {
+  margin-bottom: 12px;
+}
+
+.footer-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 160px;
+  font-size: 0.92rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-menu a:hover {
+  color: #b08a4e;
+}
+
+.menu-arrow {
+  color: rgba(244, 242, 236, 0.4);
+  font-size: 1.1rem;
+}
+
+/* ---------- Right column: form ---------- */
+.footer-form .form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-field {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f7f5f0;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+
+.form-field i {
+  color: #8a8a86;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.form-field input,
+.form-field textarea {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 0.92rem;
+  font-family: "Inter", sans-serif;
+  color: var(--ink);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #9a9a94;
+}
+
+.form-field-full {
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.form-field-full i {
+  margin-top: 3px;
+}
+
+.form-field-full textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.form-submit-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-send {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #d9b877;
+  color: #1a1508;
+  font-size: 0.92rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 999px;
+  padding: 15px 30px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-send:hover {
+  background: #c8a25f;
+}
+
+.btn-send .arrow {
+  font-size: 1rem;
+}
+.formMessage-text {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+/* ---------- Divider ---------- */
+.footer-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ---------- Contact info row ---------- */
+.footer-contact-row {
+  padding: 40px 0;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #b08a4e;
+  color: #d9b877;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+/* ---------- Bottom bar ---------- */
+.footer-bottom {
+  padding: 22px 0;
+}
+
+.footer-bottom p {
+  text-align: center;
+  font-size: 0.82rem;
+  color: rgba(244, 242, 236, 0.5);
+  margin: 0;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 991.98px) {
+  .site-footer {
+    padding-top: 60px;
+  }
+  .footer-top {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 770.98px) {
+  .footer-desc {
+    width: 32%;
+  }
+  .footer-social {
+    width: 32%;
+  }
+  .footer-form .form-row {
+    flex-direction: column;
+  }
+  .form-submit-row {
+    justify-content: stretch;
+  }
+  .btn-send {
+    width: 100%;
+    justify-content: center;
+  }
+  .footer-contact-item {
+    font-size: 0.85rem;
+  }
+  .footer-contact-row {
+    margin: 0 46px 0 23px;
+  }
+  .mil-text {
+    font-size: 20px;
   }
 }
