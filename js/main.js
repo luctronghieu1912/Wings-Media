@@ -480,11 +480,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ///////////////////////////////////////
 // SOLUTION RIGHT
-document.querySelectorAll(".solution-toggle").forEach(function (btn) {
+var solutionToggles = document.querySelectorAll(".solution-toggle");
+
+solutionToggles.forEach(function (btn) {
   btn.addEventListener("click", function () {
     var wrap = btn.nextElementSibling;
     var isOpen = btn.getAttribute("aria-expanded") === "true";
 
+    // Đóng các mục khác đang mở trước khi mở mục vừa bấm
+    solutionToggles.forEach(function (otherBtn) {
+      if (
+        otherBtn !== btn &&
+        otherBtn.getAttribute("aria-expanded") === "true"
+      ) {
+        otherBtn.setAttribute("aria-expanded", "false");
+        var otherWrap = otherBtn.nextElementSibling;
+        if (otherWrap) {
+          otherWrap.style.maxHeight = null;
+        }
+      }
+    });
+
+    // Toggle mục vừa bấm (mở nếu đang đóng, đóng nếu đang mở)
     btn.setAttribute("aria-expanded", String(!isOpen));
 
     if (!isOpen) {
