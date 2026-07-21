@@ -5411,7 +5411,7 @@ h1.headline {
 @media (max-width: 380px) {
   .hero-tags-2 span {
     font-size: 10px;
-    padding: 0 11px;
+    padding: 0 10px;
   }
   .hero-tags-1 span {
     padding: 0 13px;
