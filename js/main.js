@@ -23,11 +23,56 @@ document.addEventListener("DOMContentLoaded", function () {
     ScrollSmoother
 
     ------------------------------------------- */
-  ScrollSmoother.create({
+  var smoother = ScrollSmoother.create({
     smooth: 1,
     effects: true,
     smoothTouch: 0.1,
   });
+
+  /* -------------------------------------------
+
+    anchor links (menu Header 2 + menu mobile)
+    -> cuộn mượt bằng ScrollSmoother thay vì
+       để trình duyệt nhảy "cứng" tới id
+
+    ------------------------------------------- */
+  document
+    .querySelectorAll('a[href^="#"]:not([href="#"]):not([href="#."])')
+    .forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        var targetId = this.getAttribute("href");
+        var targetEl = document.querySelector(targetId);
+
+        if (!targetEl) return; // id không tồn tại trên trang -> để mặc định
+
+        e.preventDefault();
+
+        // Nếu menu mobile đang mở thì đóng lại trước khi cuộn
+        var menuWindow = document.querySelector(".mil-menu-window");
+        var menuBtn = document.querySelector(".mil-menu-btn");
+        if (menuWindow) menuWindow.classList.remove("mil-active");
+        if (menuBtn) menuBtn.classList.remove("mil-active");
+
+        // Trừ đi chiều cao Header 2 (đang fixed đè lên trên) để
+        // section không bị che mất phần đầu
+        var headerMain = document.getElementById("mil-header-main");
+        var headerOffset =
+          headerMain && headerMain.classList.contains("scrolled")
+            ? headerMain.offsetHeight
+            : 0;
+
+        if (smoother) {
+          var targetY = smoother.offset(targetEl, "top top") - headerOffset;
+          smoother.scrollTo(targetY, true, "top top");
+        } else {
+          var y =
+            targetEl.getBoundingClientRect().top +
+            window.pageYOffset -
+            headerOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      });
+    });
   /* -------------------------------------------
     
     tabs
@@ -183,10 +228,19 @@ document.addEventListener("DOMContentLoaded", function () {
   if (btn) {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+      if (smoother) {
+        // Tốc độ riêng cho nút back-to-top (độc lập với smooth: 1 ở trên)
+        gsap.to(smoother, {
+          scrollTop: 0,
+          duration: 1.2,
+          ease: "power2.inOut",
+        });
+      } else {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
     });
   }
   /* -------------------------------------------
@@ -320,6 +374,30 @@ document.addEventListener("DOMContentLoaded", function () {
     ------------------------------------------- */
 
   /* -------------------------------------------
+ 
+    core team slider — Embla Carousel (không autoplay, chỉ kéo tay)
+ 
+    ------------------------------------------- */
+  var teamEmblaNode = document.querySelector(".mil-team-embla");
+
+  if (teamEmblaNode && typeof EmblaCarousel !== "undefined") {
+    var teamViewport = teamEmblaNode.querySelector(".embla__viewport");
+
+    var teamEmbla = EmblaCarousel(teamViewport, {
+      loop: false,
+      align: "start",
+      dragFree: true,
+      containScroll: "trimSnaps",
+    });
+
+    teamEmbla.on("pointerDown", function () {
+      teamViewport.classList.add("is-dragging");
+    });
+    teamEmbla.on("pointerUp", function () {
+      teamViewport.classList.remove("is-dragging");
+    });
+  }
+  /* -------------------------------------------
 
     progressbar
 
@@ -389,13 +467,14 @@ async function changeLanguage(lang) {
 
     // 5. Cập nhật giao diện của 2 nút VN / EN (thêm class 'active' cho nút đang được chọn)
     document.querySelectorAll(".lang-btn").forEach((btn) => {
-      btn.classList.remove("active"); // Xóa class active ở tất cả các nút
+      btn.classList.remove("active");
     });
 
-    const activeBtn = document.getElementById(`btn-lang-${lang}`);
-    if (activeBtn) {
-      activeBtn.classList.add("active"); // Thêm class active vào nút của ngôn ngữ hiện tại
-    }
+    document
+      .querySelectorAll(`.lang-btn[data-lang="${lang}"]`)
+      .forEach((btn) => {
+        btn.classList.add("active");
+      });
   } catch (error) {
     console.error("Lỗi hệ thống đa ngôn ngữ:", error);
   }
@@ -409,16 +488,30 @@ document.addEventListener("DOMContentLoaded", () => {
   // Gọi hàm đổi ngôn ngữ
   changeLanguage(savedLang);
 });
+
 const topPanel = document.querySelector(".mil-top-panel");
+const headerMain = document.querySelector(".mil-header-main");
+const backToTopBtn = document.getElementById("mil-btt");
 
-window.addEventListener("scroll", function () {
-  if (window.scrollY > 50) {
-    topPanel.classList.add("scrolled");
-  } else {
-    topPanel.classList.remove("scrolled");
+window.addEventListener("scroll", () => {
+  // Nút back to top: hiện khi đã cuộn xuống một đoạn
+  if (backToTopBtn) {
+    backToTopBtn.classList.toggle("show", window.scrollY > 400);
   }
-});
 
+  // Mobile
+  if (window.innerWidth <= 991) {
+    topPanel.classList.remove("scrolled");
+    headerMain.classList.remove("scrolled");
+    return;
+  }
+
+  // Desktop
+  const isScrolled = window.scrollY > 50;
+
+  topPanel.classList.toggle("scrolled", isScrolled);
+  headerMain.classList.toggle("scrolled", isScrolled);
+});
 //------------------------- SIGNATURE PROJECT///
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".counter");
@@ -511,6 +604,23 @@ solutionToggles.forEach(function (btn) {
     }
   });
 });
+/* -------------------------------------------
+ 
+    CORE TEAM — Embla Carousel
+ 
+    ------------------------------------------- */
+document.addEventListener("DOMContentLoaded", function () {
+  const teamNode = document.querySelector(".team-embla");
+  if (teamNode) {
+    const teamViewport = teamNode.querySelector(".embla__viewport");
+
+    // Khởi tạo Embla, cho phép lặp lại (loop) và căn trái
+    const emblaTeam = EmblaCarousel(teamViewport, {
+      loop: true,
+      align: "start",
+    });
+  }
+});
 
 /* -------------------------------------------
  
@@ -550,3 +660,37 @@ if (pressEmblaNode && typeof EmblaCarousel !== "undefined") {
     pressViewport.classList.remove("is-dragging");
   });
 }
+// ///////////////////////////////////////
+// FLOATING CONTACT (Call / Messenger / Zalo) — tap to reveal trên mobile
+document.addEventListener("DOMContentLoaded", function () {
+  const contactBtns = document.querySelectorAll(".contact-btn");
+
+  contactBtns.forEach((btn) => {
+    btn.addEventListener("click", function (e) {
+      // Bỏ qua nút Zalo vì nút này đã được fix cứng mở rộng
+      if (this.classList.contains("zalo-btn")) return;
+
+      // Chỉ áp dụng tap-to-reveal cho màn hình điện thoại/tablet (nhỏ hơn 768px)
+      if (window.innerWidth <= 768) {
+        // Nếu nút chưa được mở (chưa có class 'active')
+        if (!this.classList.contains("active")) {
+          e.preventDefault(); // Ngăn hành động mặc định (ngăn gọi điện/chuyển link ngay lập tức)
+
+          // Đóng tất cả các nút khác lại trước khi mở nút này
+          contactBtns.forEach((b) => b.classList.remove("active"));
+
+          // Thêm class active để mở rộng nút
+          this.classList.add("active");
+        }
+        // Nếu đã có class 'active' (chạm lần 2), trình duyệt sẽ cho phép click link bình thường
+      }
+    });
+  });
+
+  // Chạm ra vùng trống bất kỳ trên màn hình để thu gọn tất cả các nút
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".floating-contact-group")) {
+      contactBtns.forEach((b) => b.classList.remove("active"));
+    }
+  });
+});

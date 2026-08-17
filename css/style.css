@@ -174,22 +174,6 @@ body {
   transition: opacity 0.35s ease;
 }
 
-.logo-white {
-  opacity: 1;
-}
-
-.logo-blue {
-  opacity: 0;
-}
-
-.mil-top-panel.scrolled .logo-white {
-  opacity: 0;
-}
-
-.mil-top-panel.scrolled .logo-blue {
-  opacity: 1;
-}
-
 /* logo end */
 .mil-logo {
   color: #002fa7;
@@ -286,7 +270,7 @@ settings
 
 .mil-jcb {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 
 .mil-tac {
@@ -555,6 +539,138 @@ h6 {
 .mil-fs25 {
   font-size: 25px;
 }
+/* ============================================================
+   HEADER 1 + HEADER 2 — thêm vào cuối style.css
+   ============================================================ */
+
+/* ---------- Header 1: trong suốt, logo + hamburger ---------- */
+.mil-top-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  background: transparent;
+  padding: 24px 0;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Khi trang cuộn xuống, Header 1 mờ dần và không nhận click nữa
+   (đã có sẵn logic JS gắn class "scrolled" cho .mil-top-panel) */
+.mil-top-panel.scrolled {
+  opacity: 0;
+  transform: translateY(-12px);
+  pointer-events: none;
+}
+
+/* Nút chuyển ngôn ngữ khi nằm bên trong menu xổ ra */
+.mil-menu-lang {
+  margin-top: 40px;
+  display: flex;
+  gap: 10px;
+}
+
+/* ---------- Header 2: nền #01102b, đầy đủ menu ---------- */
+.mil-header-main {
+  position: fixed;
+  top: -12px;
+  bottom: 89%;
+  left: 0;
+  right: 0;
+  z-index: 950;
+  background: #01102b;
+
+  transform: translateY(-100%);
+  transition: transform 0.35s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+}
+
+/* Hiện Header 2 khi trang cuộn xuống */
+.mil-header-main.scrolled {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mil-header-main .logo-wings img {
+  height: 100px;
+  width: auto;
+}
+
+.mil-main-nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.mil-main-nav a {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(244, 242, 236, 0.85);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.mil-main-nav a:hover {
+  color: #d9b877;
+}
+
+.mil-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.mil-header-actions .lang-switcher {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-header-contact {
+  display: inline-flex;
+  align-items: center;
+  background: #d9b877;
+  color: #1a1508;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 11px 24px;
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+
+.btn-header-contact:hover {
+  background: #c8a25f;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991.98px) {
+  .mil-header-main .mil-main-nav {
+    display: none; /* trên mobile chỉ dùng Header 1 + menu hamburger */
+  }
+}
+
+@media (max-width: 575.98px) {
+  .mil-top-panel {
+    padding: 16px 0;
+  }
+  .mil-header-main {
+    padding: 14px 0;
+  }
+  .mil-header-main .logo-wings img {
+    height: 28px;
+  }
+  .btn-header-contact {
+    padding: 9px 18px;
+    font-size: 0.8rem;
+  }
+}
+
 /* SIGNATURE PROJECT */
 /* Container bọc ngoài */
 
@@ -1545,7 +1661,7 @@ top panel
 
 ------------------------------------------- */
 .mil-top-panel {
-  height: 90px;
+  height: 33px;
   display: flex;
   align-items: center;
   background-color: #01102b;
@@ -1593,7 +1709,7 @@ menu button
 
 ------------------------------------------- */
 .mil-menu-btn {
-  margin-left: 30px;
+  margin-left: 10px;
   margin-right: -10px;
   margin-top: 20px;
   padding: 18px 10px 20px;
@@ -3806,7 +3922,7 @@ footer .mil-footer-bottom {
 .lang-btn {
   text-decoration: none;
   color: #ffffff; /* Màu chữ xám đậm */
-  padding: 6px 16px;
+  padding: 6px 6px;
   border-radius: 25px;
   font-weight: 600;
   font-size: 14px;
@@ -3823,7 +3939,8 @@ footer .mil-footer-bottom {
     width: auto;
   }
   .mil-top-panel {
-    height: 65px;
+    height: 25px;
+    background: #01102b;
   }
 }
 
@@ -4635,10 +4752,28 @@ h1.headline {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #d9b877;
-  margin-bottom: 8px;
+  margin-bottom: -14px;
 }
 
 .project-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+/* ============ TEAM SECTION ============ */
+.team-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 0px;
+}
+.team-name {
   font-family: "Playfair Display", serif;
   font-weight: 500;
   font-size: 20px;
@@ -5048,7 +5183,7 @@ h1.headline {
   }
   .solution-item {
     padding: 20px 0;
-    width: 100%;
+    width: 95%;
     margin-left: 20px;
   }
   .solutions-tags {
@@ -5090,6 +5225,10 @@ h1.headline {
   .project-title {
     font-size: 1.05rem;
   }
+  .project-category {
+    font-size: 10px;
+  }
+
   .project-info {
     right: 70px;
   }
@@ -5113,6 +5252,21 @@ h1.headline {
     font-size: 0.85rem;
   }
 }
+/* ============================================================
+   BLOG SECTION — thêm vào cuối style.css
+   Dùng lại toàn bộ class có sẵn từ Portfolio:
+   .portfolio-header, .eyebrow-dot, .portfolio-title, .portfolio-desc,
+   .portfolio-cta-col, .btn-outline-gold, .portfolio-grid,
+   .project-card, .project-arrow, .project-info,
+   .project-category, .project-title
+   → chỉ cần thêm đúng 1 rule cho riêng section này.
+   ============================================================ */
+
+.blog-section {
+  background: #01102b;
+  padding: 90px 0;
+}
+
 /* ============================================================
    FOOTER — thêm vào style.css (nên đặt cuối file)
    ============================================================ */
@@ -5425,4 +5579,509 @@ h1.headline {
   .footer-menu a {
     font-size: 12px;
   }
+}
+/* ============================================================
+   FLOATING CONTACT BUTTONS — thêm vào cuối style.css
+   ============================================================ */
+
+.mil-floating-contact {
+  position: fixed;
+  right: 0;
+  bottom: 24px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.fc-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Vòng tròn icon — luôn cố định kích thước, nổi trên cùng */
+.fc-circle {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 50% 0 0 50%; /* bo tròn bên trái, phẳng bên phải để dính sát viền */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.3rem;
+  box-shadow: -4px 4px 14px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 2;
+  padding-right: 6px; /* icon lùi vào một chút cho cân đối vì viền phải bị cắt phẳng */
+}
+
+.fc-call .fc-circle {
+  background: #f5323f;
+}
+
+.fc-messenger .fc-circle {
+  background: #ee2f43;
+}
+
+.fc-zalo .fc-circle {
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.fc-circle-zalo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50% 0 0 50%;
+}
+
+.fc-zalo-fallback {
+  color: #0068ff;
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: -0.02em;
+}
+
+/* Nhãn/pill chữ — ẩn theo mặc định, xổ ra bên trái khi hover */
+.fc-label {
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 999px;
+  transition:
+    max-width 0.35s ease,
+    opacity 0.25s ease,
+    padding 0.35s ease;
+  margin-right: -26px; /* lùi vào sau vòng tròn, chờ mở ra thì đẩy ra */
+  padding: 14px 0;
+}
+
+.fc-call .fc-label {
+  background: #f5323f;
+}
+.fc-messenger .fc-label {
+  background: #ee2f43;
+}
+.fc-zalo .fc-label {
+  background: #0068ff;
+}
+
+.fc-item:hover .fc-label {
+  max-width: 260px;
+  opacity: 1;
+  padding: 14px 34px 14px 18px;
+  margin-right: -26px;
+}
+
+/* Trạng thái mở bằng tap (mobile) — dùng JS toggle class này */
+.fc-item.fc-open .fc-label {
+  max-width: 260px;
+  opacity: 1;
+  padding: 14px 34px 14px 18px;
+  margin-right: -26px;
+}
+
+.fc-item.fc-open .fc-circle {
+  transform: scale(1.05);
+}
+
+/* Hiệu ứng nhẹ khi hover vòng tròn */
+.fc-item:hover .fc-circle {
+  transform: scale(1.05);
+}
+
+.fc-circle {
+  transition: transform 0.2s ease;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 575.98px) {
+  .mil-floating-contact {
+    right: 0;
+    bottom: 16px;
+    gap: 10px;
+  }
+  .fc-circle {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    font-size: 1.1rem;
+  }
+  .fc-label {
+    font-size: 0.82rem;
+  }
+}
+/* Container bám sát lề phải, canh giữa màn hình theo chiều dọc */
+.floating-contact-group {
+  position: fixed;
+  right: 5px;
+  top: 85%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* Khoảng cách giữa các nút */
+  z-index: 9999;
+  align-items: flex-end;
+}
+
+/* Kiểu dáng chung của các nút */
+.contact-btn {
+  display: flex;
+  align-items: center;
+  width: 40px; /* Chiều rộng mặc định (thu gọn) */
+  height: 40px;
+  border-radius: 50px 0 0 50px; /* Bo tròn góc trái, góc phải vuông */
+  text-decoration: none;
+  color: #ffffff;
+  overflow: hidden; /* Giấu phần chữ bị tràn khi thu gọn */
+  transition: width 0.4s ease-in-out; /* Hiệu ứng kéo dài mượt mà */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.contact-btn1 {
+  display: flex;
+  align-items: center;
+  width: 50px; /* Chiều rộng mặc định (thu gọn) */
+  height: 50px;
+  margin-top: -6px;
+}
+.contact-btn1 .icon1 {
+  min-width: 60px; /* Giữ icon luôn vuông vức 60x60 */
+
+  display: flex;
+}
+/* Hiệu ứng thò dài ra khi đưa chuột vào */
+/* Hiệu ứng thò dài ra khi đưa chuột vào (Desktop) hoặc khi có class active (Mobile) */
+.contact-btn:hover,
+.contact-btn.active {
+  width: 240px;
+}
+
+/* Hiện chữ khi hover hoặc active */
+.contact-btn:hover .text,
+.contact-btn.active .text {
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+/* Khu vực chứa Icon */
+.contact-btn .icon {
+  min-width: 50px; /* Giữ icon luôn vuông vức 60x60 */
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-btn .icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* Khu vực chữ (Số điện thoại) */
+.contact-btn .text {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap; /* Không cho chữ rớt dòng */
+  padding-right: 20px; /* Khoảng cách chữ so với lề phải */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.contact-btn:hover .text {
+  opacity: 1; /* Hiện chữ khi hover */
+  transition-delay: 0.1s; /* Chờ nút giãn ra một chút mới hiện chữ lên */
+}
+
+/* --- MÀU SẮC CHO TỪNG NÚT --- */
+
+/* Nút Điện thoại (Đỏ) */
+.phone-btn {
+  background-color: #002fa7;
+}
+
+/* Nút Messenger (Đỏ theo hình của bạn) */
+.messenger-btn {
+  background-color: #002fa7;
+}
+
+/* Nút Zalo (Xanh dương) */
+
+.zalo-icon {
+  height: 80%;
+  width: 60px;
+  margin-left: 10px;
+}
+/* ============================================================
+   CORE TEAM SECTION — thêm vào cuối style.css
+   ============================================================ */
+
+.team-section {
+  background: #01102b;
+  padding: 90px 0;
+}
+
+/* ---------- Embla viewport ---------- */
+.mil-team-embla {
+  position: relative;
+}
+
+.mil-team-embla .embla__viewport {
+  overflow: hidden;
+  width: 100%;
+  cursor: grab;
+}
+
+.mil-team-embla .embla__viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.mil-team-embla .embla__container {
+  display: flex;
+  gap: 24px;
+}
+
+.mil-team-embla .embla__slide {
+  flex: 0 0 280px;
+  min-width: 0;
+}
+
+/* ---------- Team card ---------- */
+.team-card {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: 6px;
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.team-photo {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* Placeholder avatar — thay bằng ảnh thật: 
+   .team-photo { background-image:url('...'); background-size:cover; background-position:center; }
+   rồi bỏ span .team-initials đi */
+.team-avatar-1 {
+  background-image: url("../img/about/core-team/Artboard\ 1.webp");
+  background-size: cover;
+  background-position: center;
+}
+.team-avatar-2 {
+  background-image: url("../img/about/core-team/Artboard\ 2.png");
+  background-size: cover;
+  background-position: center;
+}
+.team-avatar-3 {
+  background-image: url("../img/about/core-team/Artboard\ 3.png");
+  background-size: cover;
+  background-position: center;
+}
+.team-avatar-4 {
+  background: linear-gradient(135deg, #01102b, #16233f);
+}
+.team-avatar-5 {
+  background: linear-gradient(135deg, #6fb3ef, #b7dcf7);
+}
+.team-avatar-6 {
+  background: linear-gradient(135deg, #d9b877, #f4e3bf);
+}
+
+.team-initials {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 3.4rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Lớp gradient tối phía dưới để tên/chức danh luôn đọc rõ */
+.team-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 45%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.team-info {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+  z-index: 2;
+  transition: opacity 0.25s ease;
+}
+
+.team-name {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.team-role {
+  display: block;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Hover panel: hiện kinh nghiệm chi tiết ---------- */
+.team-hover {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: rgba(1, 16, 43, 0.94);
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  pointer-events: none;
+}
+
+.team-card:hover .team-hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.team-card:hover .team-info {
+  opacity: 0;
+}
+
+.team-exp {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #d9b877;
+  border: 1px solid #b08a4e;
+  border-radius: 999px;
+  padding: 5px 14px;
+  margin-bottom: 14px;
+  align-self: flex-start;
+}
+
+.team-bio {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: rgba(244, 242, 236, 0.85);
+  margin-bottom: 16px;
+}
+
+.team-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.team-tags span {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #f4f2ec;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 767.98px) {
+  .team-section {
+    padding: 60px 0;
+  }
+  .mil-team-embla .embla__slide {
+    flex-basis: 240px;
+  }
+  .team-name {
+    font-size: 1.1rem;
+  }
+  .team-bio {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .mil-team-embla .embla__slide {
+    flex-basis: 210px;
+  }
+  .team-initials {
+    font-size: 2.6rem;
+  }
+  .team-bio {
+    font-size: 10px;
+  }
+  .team-exp {
+    padding: 0px 14px;
+    white-space: nowrap;
+  }
+  .team-tags span {
+    font-size: 8px;
+    padding: 0 12px;
+  }
+}
+/* Nút Back to top — nằm trong floating-contact-group, dưới Zalo */
+.back-to-top-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #d9b877;
+  color: #01102b;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease,
+    background-color 0.2s ease;
+}
+
+.back-to-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top-btn:hover {
+  background-color: #c8a25f;
+}
+
+.back-to-top-btn svg {
+  width: 22px;
+  height: 22px;
 }

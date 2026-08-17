@@ -8,10 +8,7 @@
     <meta name="author" content="bslthemes" />
     <link rel="stylesheet" href="./css/plugins/bootstrap-grid.css" />
     <link rel="stylesheet" href="./fonts/css/font-awesome.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+
     <link rel="stylesheet" href="./css/style.css" />
     <title>Wings Storytelling Hub</title>
 
@@ -31,7 +28,7 @@
         <div class="mil-progress"></div>
       </div>
 
-      <div class="mil-top-panel">
+      <!-- <div class="mil-top-panel">
         <div class="container">
           <div class="row mil-aic">
             <div class="col-6">
@@ -106,30 +103,155 @@
               </ul>
             </li>
           </ul>
-          <ul class="mil-social mil-center">
+         
+        </div>
+      </div> -->
+
+      <!-- ============================================
+     HEADER 1 — trong suốt, chỉ logo + hamburger
+     (hiện mặc định ở đầu trang)
+     ============================================ -->
+      <div class="mil-top-panel" id="mil-top-panel">
+        <div class="container">
+          <div class="row mil-aic">
+            <div class="col-6">
+              <div class="logo-wings">
+                <a href="index.html">
+                  <img
+                    id="header-logo"
+                    src="./img/logos/logo-wings-white.png"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col-6 mil-jce mil-aic">
+              <div class="mil-buttons-frame">
+                <div class="mil-menu-btn mil-c-gone">
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu xổ ra khi bấm hamburger — giờ có luôn nút chuyển ngôn ngữ bên trong -->
+      <div class="mil-menu-window">
+        <div class="container">
+          <ul class="mil-main-menu mil-c-gone">
             <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="#portfolio">Portfolio</a>
+              <ul>
+                <li>
+                  <a href="hat-cung-nguon-coi.html">Hát cùng nguồn cội</a>
+                </li>
+                <li><a href="tu-tinh-que-huong.html">Tự tình quê hương</a></li>
+                <li><a href="chuyen-tai-chinh.html">Chuyên tài chính</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#.">Pages</a>
+              <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="coming-soon.html">Coming soon</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#.">Blog</a>
+              <ul>
+                <li><a href="blog.html">List</a></li>
+                <li><a href="publication.html">Blog 1</a></li>
+              </ul>
+            </li>
+            <!-- Nút chuyển ngôn ngữ — chuyển vào trong menu -->
+            <!-- <div class="lang-switcher mil-menu-lang">
               <a
-                href="https://www.facebook.com/truyenthongdoicanh"
-                class="mil-c-gone"
-                ><i class="fab fa-facebook-f" style="color: #002fa7"></i
-              ></a>
-            </li>
-            <li>
-              <a href="#." class="mil-c-gone"
-                ><i class="fab fa-instagram" style="color: #002fa7"></i
-              ></a>
-            </li>
+                href="javascript:void(0)"
+                class="lang-btn active"
+                data-lang="vi"
+                onclick="changeLanguage('vi')"
+                >VN</a
+              >
+              <a
+                href="javascript:void(0)"
+                class="lang-btn"
+                data-lang="en"
+                onclick="changeLanguage('en')"
+                >EN</a
+              >
+            </div> -->
           </ul>
         </div>
       </div>
 
+      <!-- ============================================
+     HEADER 2 — nền #01102b, đầy đủ menu ngang
+     (hiện ra / dính lại khi cuộn xuống)
+     ============================================ -->
+      <header class="mil-header-main" id="mil-header-main">
+        <div class="container">
+          <div class="row mil-aic mil-jcb">
+            <div class="col-auto">
+              <div class="logo-wings">
+                <a href="index.html">
+                  <img src="./img/logos/logo-wings-white.png" alt="logo" />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-auto d-none d-lg-block">
+              <nav class="mil-main-nav">
+                <a href="#about">GIỚI THIỆU</a>
+                <a href="#services">DỊCH VỤ</a>
+                <a href="#portfolio">DỰ ÁN</a>
+                <a href="#team">CORE TEAM</a>
+                <a href="#blog">BLOG</a>
+              </nav>
+            </div>
+
+            <div class="col-auto mil-jce mil-aic mil-header-actions">
+              <div class="lang-switcher">
+                <a
+                  href="javascript:void(0)"
+                  class="lang-btn active"
+                  data-lang="vi"
+                  onclick="changeLanguage('vi')"
+                  >VN</a
+                >
+                <a
+                  href="javascript:void(0)"
+                  class="lang-btn"
+                  data-lang="en"
+                  onclick="changeLanguage('en')"
+                  >EN</a
+                >
+              </div>
+              <a href="contact.html" class="btn-header-contact">Liên hệ</a>
+            </div>
+          </div>
+        </div>
+      </header>
       <div id="smooth-content" class="mil-content">
         <!----------------------------------- 
                   SIGNATURE PROJECT
         ------------------------------------>
-        <section class="signature-project-banner">
+        <section class="signature-project-banner" id="signature-project">
           <div class="mil-banner mil-image-banner">
-            <video autoplay muted loop playsinline class="mil-bg-video">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="./img/banners/backround3-poster.jpg"
+              class="mil-bg-video"
+            >
               <source src="./img/banners/backround3.mp4" type="video/mp4" />
             </video>
             <div class="container">
@@ -292,7 +414,7 @@
                           SECTION 2
         -------------------------------------->
         <!-- Hero section -->
-        <section class="hero-section mil-up">
+        <section class="hero-section mil-up" id="about">
           <div class="container hero-content">
             <div class="row align-items-center">
               <!-- Number -->
@@ -338,7 +460,7 @@
         <!------------------------------------- 
                           SECTION 3
         -------------------------------------->
-        <section class="milestones-section mil-up">
+        <section class="milestones-section mil-up" id="">
           <div class="container">
             <div class="milestones-header mb-5">
               <h2 class="milestones-title">Đồng hành<br />cùng doanh nghiệp</h2>
@@ -385,113 +507,159 @@
               <div class="partner-slider">
                 <div class="partner-track">
                   <div class="partner-item">
-                    <img src="./img/home/logo-brands/byfas.webp" alt="brand" />
+                    <img
+                      loading="lazy"
+                      src="./img/home/logo-brands/byfas.webp"
+                      alt="brand"
+                    />
                   </div>
                   <div class="partner-item">
                     <img
+                      loading="lazy"
                       src="./img/home/logo-brands/báo phụ nữ.webp"
                       alt="brand"
                     />
                   </div>
                   <div class="partner-item">
                     <img
+                      loading="lazy"
                       src="./img/home/logo-brands/fpt chung khoan.webp"
                       alt="brand"
                     />
                   </div>
                   <div class="partner-item">
-                    <img src="./img/home/logo-brands/gold.webp" alt="brand" />
-                  </div>
-                  <div class="partner-item">
-                    <img src="./img/home/logo-brands/htv.webp" alt="brand" />
+                    <img
+                      loading="lazy"
+                      src="./img/home/logo-brands/gold.webp"
+                      alt="brand"
+                    />
                   </div>
                   <div class="partner-item">
                     <img
+                      loading="lazy"
+                      src="./img/home/logo-brands/htv.webp"
+                      alt="brand"
+                    />
+                  </div>
+                  <div class="partner-item">
+                    <img
+                      loading="lazy"
                       src="./img/home/logo-brands/kim duc.webp"
                       alt="brand"
                     />
                   </div>
                   <div class="partner-item">
                     <img
+                      loading="lazy"
                       src="./img/home/logo-brands/nhua binh minh.webp"
                       alt="brand"
                     />
                   </div>
                   <div class="partner-item">
                     <img
+                      loading="lazy"
                       src="./img/home/logo-brands/thanh nien.webp"
                       alt="brand"
                     />
                   </div>
                   <div class="partner-item">
                     <img
+                      loading="lazy"
                       src="./img/home/logo-brands/victory a.webp"
                       alt="brand"
                     />
                   </div>
                   <div class="partner-item">
                     <img
+                      loading="lazy"
                       src="./img/home/logo-brands/vinamit.webp"
                       alt="brand"
                     />
                   </div>
                   <div class="partner-item">
-                    <img src="./img/home/logo-brands/vtv.webp" alt="brand" />
+                    <img
+                      loading="lazy"
+                      src="./img/home/logo-brands/vtv.webp"
+                      alt="brand"
+                    />
                   </div>
 
                   <div class="partner-item">
-                    <img src="./img/home/logo-brands/byfas.webp" alt="brand" />
+                    <img
+                      loading="lazy"
+                      src="./img/home/logo-brands/byfas.webp"
+                      alt="brand"
+                    />
                   </div>
                   <div class="partner-item">
                     <img
+                      loading="lazy"
                       src="./img/home/logo-brands/báo phụ nữ.webp"
                       alt="brand"
                     />
                   </div>
                   <div class="partner-item">
                     <img
+                      loading="lazy"
                       src="./img/home/logo-brands/fpt chung khoan.webp"
                       alt="brand"
                     />
                   </div>
                   <div class="partner-item">
-                    <img src="./img/home/logo-brands/gold.webp" alt="brand" />
-                  </div>
-                  <div class="partner-item">
-                    <img src="./img/home/logo-brands/htv.webp" alt="brand" />
+                    <img
+                      loading="lazy"
+                      src="./img/home/logo-brands/gold.webp"
+                      alt="brand"
+                    />
                   </div>
                   <div class="partner-item">
                     <img
+                      loading="lazy"
+                      src="./img/home/logo-brands/htv.webp"
+                      alt="brand"
+                    />
+                  </div>
+                  <div class="partner-item">
+                    <img
+                      loading="lazy"
                       src="./img/home/logo-brands/kim duc.webp"
                       alt="brand"
                     />
                   </div>
                   <div class="partner-item">
                     <img
+                      loading="lazy"
                       src="./img/home/logo-brands/nhua binh minh.webp"
                       alt="brand"
                     />
                   </div>
                   <div class="partner-item">
                     <img
+                      loading="lazy"
                       src="./img/home/logo-brands/thanh nien.webp"
                       alt="brand"
                     />
                   </div>
                   <div class="partner-item">
                     <img
+                      loading="lazy"
                       src="./img/home/logo-brands/victory a.webp"
                       alt="brand"
                     />
                   </div>
                   <div class="partner-item">
                     <img
+                      loading="lazy"
                       src="./img/home/logo-brands/vinamit.webp"
                       alt="brand"
                     />
                   </div>
                   <div class="partner-item">
-                    <img src="./img/home/logo-brands/vtv.webp" alt="brand" />
+                    <img
+                      loading="lazy"
+                      src="./img/home/logo-brands/vtv.webp"
+                      alt="brand"
+                    />
                   </div>
                 </div>
               </div>
@@ -506,223 +674,212 @@
                           SECTION 4
         -------------------------------------->
         <!-- Solutions section -->
-        <section class="solutions-section mil-up">
-          <div class="">
-            <div class="container row align-items-center">
-              <!-- Big gradient title -->
-              <div class="col-lg-5 col-md-5 solutions-left">
-                <h2 class="solutions-title">
-                  <span class="gword"
-                    ><span class="l l1">G</span><span class="l l2">i</span
-                    ><span class="l l3">ả</span
-                    ><span class="l l4">i</span></span
-                  >
-                  <br class="d-none d-md-block" />
-                  <span class="gword"
-                    ><span class="l l2">P</span><span class="l l1">h</span
-                    ><span class="l l4">á</span
-                    ><span class="l l3">p</span></span
-                  >
-                </h2>
+        <section class="solutions-section mil-up container" id="services">
+          <div class="row align-items-center">
+            <!-- Big gradient title -->
+            <div class="col-lg-5 col-md-5 solutions-left">
+              <h2 class="solutions-title">
+                <span class="gword"
+                  ><span class="l l1">G</span><span class="l l2">i</span
+                  ><span class="l l3">ả</span><span class="l l4">i</span></span
+                >
+                <br class="d-none d-md-block" />
+                <span class="gword"
+                  ><span class="l l2">P</span><span class="l l1">h</span
+                  ><span class="l l4">á</span><span class="l l3">p</span></span
+                >
+              </h2>
+            </div>
+
+            <!-- Divider -->
+            <div
+              class="col-lg-1 col-md-0 d-none d-lg-flex solutions-divider-col"
+            >
+              <div class="solutions-vline"></div>
+            </div>
+
+            <!-- Right list -->
+            <div class="col-lg-6 col-md-7 solutions-right">
+              <div class="solution-item">
+                <button
+                  class="solution-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="solution-title">Brand Strategy</span>
+                  <span class="solution-icon">+</span>
+                </button>
+                <div class="solution-desc-wrap">
+                  <p class="solution-desc">
+                    Xây dựng nền tảng cho một thương hiệu khác biệt
+                  </p>
+                  <br />
+                  <div class="hero-tags-1">
+                    <span
+                      >Brand <br class="d-lg-none d-md-block" />
+                      Positioning</span
+                    >
+                    <span
+                      >Brand <br class="d-lg-none d-md-block" />Strategy</span
+                    >
+                    <span
+                      >Brand <br class="d-lg-none d-md-block" />Identity</span
+                    >
+                    <span
+                      >Brand <br class="d-lg-none d-md-block" />Guidelines</span
+                    >
+                  </div>
+                </div>
               </div>
-
-              <!-- Divider -->
-              <div
-                class="col-lg-1 col-md-0 d-none d-lg-flex solutions-divider-col"
-              >
-                <div class="solutions-vline"></div>
+              <div class="solution-item">
+                <button
+                  class="solution-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="solution-title">Story</span>
+                  <span class="solution-icon">+</span>
+                </button>
+                <div class="solution-desc-wrap">
+                  <p class="solution-desc">
+                    Biến chiến lược thành những câu chuyện chạm đến khách hàng
+                  </p>
+                  <br />
+                  <div class="hero-tags-1">
+                    <span>Storytelling </span>
+                    <span
+                      >Content<br class="d-lg-none d-md-block" />
+                      Strategy</span
+                    >
+                    <span>Scriptwriting</span>
+                    <span
+                      >Founder<br class="d-lg-none d-md-block" />
+                      Story</span
+                    >
+                  </div>
+                </div>
               </div>
+              <div class="solution-item">
+                <button
+                  class="solution-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="solution-title">VIDEO & AI FACTORY</span>
+                  <span class="solution-icon">+</span>
+                </button>
+                <div class="solution-desc-wrap">
+                  <p class="solution-desc">
+                    Sản xuất video thế hệ mới giúp thương hiệu tăng trưởng và
+                    bán hàng hiệu quả
+                  </p>
+                  <br />
+                  <div class="hero-tags-0">
+                    <span>Brand <br />Films</span>
+                    <span
+                      >TVC<br />
+                      & Commercials</span
+                    >
+                    <span>AI Video<br />Production</span>
+                    <span
+                      >Sales Video<br />
+                      & PR</span
+                    >
+                    <span
+                      >Social<br />
+                      Shorts</span
+                    >
+                    <span
+                      >E-commerce<br />
+                      Content</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="solution-item">
+                <button
+                  class="solution-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="solution-title">MARKETING</span>
+                  <span class="solution-icon">+</span>
+                </button>
+                <div class="solution-desc-wrap">
+                  <p class="solution-desc">
+                    Lan tỏa thương hiệu bằng những chiến dịch tạo chuyển đổi
+                  </p>
 
-              <!-- Right list -->
-              <div class="col-lg-6 col-md-7 solutions-right">
-                <div class="solution-item">
-                  <button
-                    class="solution-toggle"
-                    type="button"
-                    aria-expanded="false"
-                  >
-                    <span class="solution-title">Brand Strategy</span>
-                    <span class="solution-icon">+</span>
-                  </button>
-                  <div class="solution-desc-wrap">
-                    <p class="solution-desc">
-                      Xây dựng nền tảng cho một thương hiệu khác biệt
-                    </p>
-                    <br />
-                    <div class="hero-tags-1">
-                      <span
-                        >Brand <br class="d-lg-none d-md-block" />
-                        Positioning</span
-                      >
-                      <span
-                        >Brand <br class="d-lg-none d-md-block" />Strategy</span
-                      >
-                      <span
-                        >Brand <br class="d-lg-none d-md-block" />Identity</span
-                      >
-                      <span
-                        >Brand
-                        <br class="d-lg-none d-md-block" />Guidelines</span
-                      >
-                    </div>
+                  <br />
+                  <div class="hero-tags-1">
+                    <span
+                      >Integrated<br
+                        class="d-lg-none d-md-block"
+                      />Campaigns</span
+                    >
+                    <span
+                      >Marketing<br class="d-lg-none d-md-block" />& PR</span
+                    >
+                    <span>Social<br class="d-lg-none d-md-block" />Media</span>
+                    <span
+                      >Performance<br
+                        class="d-lg-none d-md-block"
+                      />Marketing</span
+                    >
                   </div>
                 </div>
-                <div class="solution-item">
-                  <button
-                    class="solution-toggle"
-                    type="button"
-                    aria-expanded="false"
-                  >
-                    <span class="solution-title">Story</span>
-                    <span class="solution-icon">+</span>
-                  </button>
-                  <div class="solution-desc-wrap">
-                    <p class="solution-desc">
-                      Biến chiến lược thành những câu chuyện chạm đến khách hàng
-                    </p>
-                    <br />
-                    <div class="hero-tags-1">
-                      <span>Storytelling </span>
-                      <span
-                        >Content<br class="d-lg-none d-md-block" />
-                        Strategy</span
-                      >
-                      <span>Scriptwriting</span>
-                      <span
-                        >Founder<br class="d-lg-none d-md-block" />
-                        Story</span
-                      >
-                    </div>
+              </div>
+              <div class="solution-item">
+                <button
+                  class="solution-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="solution-title">CSR</span>
+                  <span class="solution-icon">+</span>
+                </button>
+                <div class="solution-desc-wrap">
+                  <p class="solution-desc">
+                    Kiến tạo các chiến dịch tạo giá trị cho cộng đồng và thương
+                    hiệu
+                  </p>
+                  <br />
+                  <div class="hero-tags-2">
+                    <span>CSR<br />Strategy</span>
+                    <span>ESG<br />Communication</span>
+                    <span>Social<br />Impact Campaigns</span>
+                    <span>Community<br />Engagement</span>
                   </div>
                 </div>
-                <div class="solution-item">
-                  <button
-                    class="solution-toggle"
-                    type="button"
-                    aria-expanded="false"
-                  >
-                    <span class="solution-title">VIDEO & AI FACTORY</span>
-                    <span class="solution-icon">+</span>
-                  </button>
-                  <div class="solution-desc-wrap">
-                    <p class="solution-desc">
-                      Sản xuất video thế hệ mới giúp thương hiệu tăng trưởng và
-                      bán hàng hiệu quả
-                    </p>
-                    <br />
-                    <div class="hero-tags-0">
-                      <span>Brand <br />Films</span>
-                      <span
-                        >TVC<br />
-                        & Commercials</span
-                      >
-                      <span>AI Video<br />Production</span>
-                      <span
-                        >Sales Video<br />
-                        & PR</span
-                      >
-                      <span
-                        >Social<br />
-                        Shorts</span
-                      >
-                      <span
-                        >E-commerce<br />
-                        Content</span
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="solution-item">
-                  <button
-                    class="solution-toggle"
-                    type="button"
-                    aria-expanded="false"
-                  >
-                    <span class="solution-title">MARKETING</span>
-                    <span class="solution-icon">+</span>
-                  </button>
-                  <div class="solution-desc-wrap">
-                    <p class="solution-desc">
-                      Lan tỏa thương hiệu bằng những chiến dịch tạo chuyển đổi
-                    </p>
-
-                    <br />
-                    <div class="hero-tags-1">
-                      <span
-                        >Integrated<br
-                          class="d-lg-none d-md-block"
-                        />Campaigns</span
-                      >
-                      <span
-                        >Marketing<br class="d-lg-none d-md-block" />& PR</span
-                      >
-                      <span
-                        >Social<br class="d-lg-none d-md-block" />Media</span
-                      >
-                      <span
-                        >Performance<br
-                          class="d-lg-none d-md-block"
-                        />Marketing</span
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="solution-item">
-                  <button
-                    class="solution-toggle"
-                    type="button"
-                    aria-expanded="false"
-                  >
-                    <span class="solution-title">CSR</span>
-                    <span class="solution-icon">+</span>
-                  </button>
-                  <div class="solution-desc-wrap">
-                    <p class="solution-desc">
-                      Kiến tạo các chiến dịch tạo giá trị cho cộng đồng và
-                      thương hiệu
-                    </p>
-                    <br />
-                    <div class="hero-tags-2">
-                      <span>CSR<br />Strategy</span>
-                      <span>ESG<br />Communication</span>
-                      <span>Social<br />Impact Campaigns</span>
-                      <span>Community<br />Engagement</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="solution-item solution-item-last">
-                  <button
-                    class="solution-toggle"
-                    type="button"
-                    aria-expanded="false"
-                  >
-                    <span class="solution-title">CULTURE</span>
-                    <span class="solution-icon">+</span>
-                  </button>
-                  <div class="solution-desc-wrap">
-                    <p class="solution-desc">
-                      Phát triển các dự án văn hóa và trải nghiệm mang giá trị
-                      lâu dài.
-                    </p>
-                    <br />
-                    <div class="hero-tags-1">
-                      <span
-                        >Cultural<br
-                          class="d-lg-none d-md-block"
-                        />Projects</span
-                      >
-                      <span
-                        >Brand<br
-                          class="d-lg-none d-md-block"
-                        />Experience</span
-                      >
-                      <span>Exhibitions</span>
-                      <span
-                        >Cultural IP<br
-                          class="d-lg-none d-md-block"
-                        />Development</span
-                      >
-                    </div>
+              </div>
+              <div class="solution-item solution-item-last">
+                <button
+                  class="solution-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="solution-title">CULTURE</span>
+                  <span class="solution-icon">+</span>
+                </button>
+                <div class="solution-desc-wrap">
+                  <p class="solution-desc">
+                    Phát triển các dự án văn hóa và trải nghiệm mang giá trị lâu
+                    dài.
+                  </p>
+                  <br />
+                  <div class="hero-tags-1">
+                    <span
+                      >Cultural<br class="d-lg-none d-md-block" />Projects</span
+                    >
+                    <span
+                      >Brand<br class="d-lg-none d-md-block" />Experience</span
+                    >
+                    <span>Exhibitions</span>
+                    <span
+                      >Cultural IP<br
+                        class="d-lg-none d-md-block"
+                      />Development</span
+                    >
                   </div>
                 </div>
               </div>
@@ -730,10 +887,10 @@
           </div>
         </section>
         <!------------------------------------- 
-                          SECTION 5
+                          SECTION 5 PORTFOLIO
         -------------------------------------->
         <!-- Portfolio section -->
-        <section class="portfolio-section mil-up">
+        <section class="portfolio-section mil-up" id="portfolio">
           <div class="container">
             <div class="row align-items-end portfolio-header">
               <div class="col-lg-8">
@@ -853,15 +1010,205 @@
             </div>
           </div>
         </section>
+        <!-- ============================================
+     CORE TEAM SECTION — slide kéo ngang, hover hiện chi tiết
+     Dùng chung thư viện Embla đã load sẵn cho phần Press
+     ============================================ -->
+        <section class="team-section mil-up" id="team">
+          <div class="container">
+            <div class="row align-items-end portfolio-header">
+              <div class="col-lg-8">
+                <h2 class="portfolio-title">Core Team</h2>
+              </div>
+              <div class="col-lg-4 portfolio-cta-col">
+                <a href="portfolio.html" class="btn-outline-gold"
+                  >Xem thêm <span class="arrow">&rarr;</span></a
+                >
+              </div>
+            </div>
+
+            <div class="embla mil-team-embla">
+              <div class="embla__viewport">
+                <div class="embla__container">
+                  <!-- ===== Card 1 ===== -->
+                  <div class="embla__slide">
+                    <div class="team-card">
+                      <div class="team-photo team-avatar-1"></div>
+                      <div class="team-info">
+                        <h3 class="team-name">Nguyễn Yến Trinh</h3>
+                        <span class="team-role">Founder</span>
+                      </div>
+                      <div class="team-hover">
+                        <span class="team-exp">20+ năm kinh nghiệm</span>
+                        <p class="team-bio">
+                          Nhà báo, đạo diễn và nhà sản xuất nội dung với hơn 20
+                          năm kinh nghiệm trong lĩnh vực truyền thông, văn hoá
+                          và tổ chức sự kiện.
+                        </p>
+                        <div class="team-tags">
+                          <span>Brand Strategy</span>
+                          <span>Storytelling</span>
+                          <span>Creative Direction</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ===== Card 2 ===== -->
+                  <div class="embla__slide">
+                    <div class="team-card">
+                      <div class="team-photo team-avatar-2"></div>
+                      <div class="team-info">
+                        <h3 class="team-name">
+                          NGUYỄN TÀI ANH (Nghệ sĩ Quang Thành)
+                        </h3>
+                        <span class="team-role"
+                          >Giám đốc Phát triển Quốc tế</span
+                        >
+                      </div>
+                      <div class="team-hover">
+                        <span class="team-exp">9+ năm kinh nghiệm</span>
+                        <p class="team-bio">
+                          Kinh nghiệm tổ chức, biên tập các sự kiện âm nhạc nghệ
+                          thuật tại Việt Nam và nhiều nước trên thế giới.
+                        </p>
+                        <div class="team-tags">
+                          <span>Scriptwriting</span>
+                          <span>Content Strategy</span>
+                          <span>Editorial</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ===== Card 3 ===== -->
+                  <div class="embla__slide">
+                    <div class="team-card">
+                      <div class="team-photo team-avatar-3"></div>
+                      <div class="team-info">
+                        <h3 class="team-name">NGUYỄN THỊ NGỌC BÍCH</h3>
+                        <span class="team-role">Executive Producer</span>
+                      </div>
+                      <div class="team-hover">
+                        <span class="team-exp">10+ năm kinh nghiệm</span>
+                        <p class="team-bio">
+                          Giám khảo Cánh Diều Vàng (2020, 2022, 2024).<br />
+                          3 Giải Cánh Diều Vàng Biên kịch xuất sắc (2016, 2019,
+                          2022).<br />
+                          Giải Bông Sen Vàng (2025).<br />
+                          Biên kịch xuất sắc nhất – Liên hoan Phim Châu Á Đà
+                          Nẵng (2025).
+                        </p>
+                        <div class="team-tags">
+                          <span>Film Production</span>
+                          <span>TVC</span>
+                          <span>Post-Production</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ===== Card 4 ===== -->
+                  <div class="embla__slide">
+                    <div class="team-card">
+                      <div class="team-photo team-avatar-4">
+                        <span class="team-initials">PD</span>
+                      </div>
+                      <div class="team-info">
+                        <h3 class="team-name">Phạm Thị D</h3>
+                        <span class="team-role">Brand Strategist</span>
+                      </div>
+                      <div class="team-hover">
+                        <span class="team-exp">8+ năm kinh nghiệm</span>
+                        <p class="team-bio">
+                          Xây dựng định vị và chiến lược thương hiệu cho doanh
+                          nghiệp vừa và lớn, từng tư vấn cho nhiều nhãn hàng
+                          trong ngành FMCG.
+                        </p>
+                        <div class="team-tags">
+                          <span>Brand Positioning</span>
+                          <span>Market Research</span>
+                          <span>Strategy</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ===== Card 5 ===== -->
+                  <div class="embla__slide">
+                    <div class="team-card">
+                      <div class="team-photo team-avatar-5">
+                        <span class="team-initials">HD</span>
+                      </div>
+                      <div class="team-info">
+                        <h3 class="team-name">Hoàng Văn Đ</h3>
+                        <span class="team-role">Marketing &amp; PR Lead</span>
+                      </div>
+                      <div class="team-hover">
+                        <span class="team-exp">7+ năm kinh nghiệm</span>
+                        <p class="team-bio">
+                          Triển khai chiến dịch marketing tích hợp và quan hệ
+                          báo chí, xây dựng mối quan hệ với hơn 50 đầu báo và
+                          kênh truyền thông.
+                        </p>
+                        <div class="team-tags">
+                          <span>Integrated Campaigns</span>
+                          <span>PR</span>
+                          <span>Social Media</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ===== Card 6 ===== -->
+                  <div class="embla__slide">
+                    <div class="team-card">
+                      <div class="team-photo team-avatar-6">
+                        <span class="team-initials">VE</span>
+                      </div>
+                      <div class="team-info">
+                        <h3 class="team-name">Vũ Thị E</h3>
+                        <span class="team-role">Cultural Project Manager</span>
+                      </div>
+                      <div class="team-hover">
+                        <span class="team-exp">6+ năm kinh nghiệm</span>
+                        <p class="team-bio">
+                          Quản lý các dự án văn hóa và trải nghiệm thương hiệu,
+                          kết nối cộng đồng nghệ thuật và tổ chức sự kiện quy mô
+                          lớn.
+                        </p>
+                        <div class="team-tags">
+                          <span>Cultural Projects</span>
+                          <span>Event Management</span>
+                          <span>Community</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!------------------------------------- 
-                          SECTION 6
+                          SECTION 7 DOI CANH BÁO CHÍ
         -------------------------------------->
 
         <!-- Press section -->
-        <section class="press-section mil-up">
+        <section class="press-section mil-up" id="press-section">
           <div class="container">
-            <h2 class="press-title">Đôi Cánh trên báo chí</h2>
-
+            <!-- <h2 class="press-title">Đôi Cánh trên báo chí</h2> -->
+            <div class="row align-items-end portfolio-header">
+              <div class="col-lg-8">
+                <h2 class="portfolio-title">Đôi cánh trên báo chí</h2>
+              </div>
+              <div class="col-lg-4 portfolio-cta-col">
+                <a href="press.html" class="btn-outline-gold"
+                  >Xem thêm <span class="arrow">&rarr;</span></a
+                >
+              </div>
+            </div>
             <div class="embla mil-press-embla">
               <div class="embla__viewport">
                 <div class="embla__container">
@@ -989,6 +1336,124 @@
                   </div>
                   <div></div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ============================================
+     BLOG SECTION — dạng lưới tĩnh, giống Portfolio
+     ============================================ -->
+        <section class="blog-section mil-up" id="blog">
+          <div class="container">
+            <div class="row align-items-end portfolio-header">
+              <div class="col-lg-8">
+                <h2 class="portfolio-title">BLOG</h2>
+              </div>
+              <div class="col-lg-4 portfolio-cta-col">
+                <a href="blog.html" class="btn-outline-gold"
+                  >Xem tất cả bài viết <span class="arrow">&rarr;</span></a
+                >
+              </div>
+            </div>
+
+            <div class="row g-4 portfolio-grid">
+              <div class="col-md-6 col-lg-4">
+                <a
+                  href="publication.html"
+                  class="project-card"
+                  style="background-image: url(/img/blog/1.jpg)"
+                >
+                  <span class="project-arrow">&rarr;</span>
+                  <div class="project-info">
+                    <span class="project-category">Marketing</span>
+                    <h3 class="project-title">
+                      5 xu hướng Content Marketing doanh nghiệp cần biết năm
+                      2026
+                    </h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <a
+                  href="publication.html"
+                  class="project-card"
+                  style="background-image: url(/img/blog/1.jpg)"
+                >
+                  <span class="project-arrow">&rarr;</span>
+                  <div class="project-info">
+                    <span class="project-category">Content</span>
+                    <h3 class="project-title">
+                      Vì sao Video Storytelling là chìa khóa cho thương hiệu
+                      hiện đại
+                    </h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <a
+                  href="publication.html"
+                  class="project-card"
+                  style="background-image: url(/img/blog/1.jpg)"
+                >
+                  <span class="project-arrow">&rarr;</span>
+                  <div class="project-info">
+                    <span class="project-category">Brand Strategy</span>
+                    <h3 class="project-title">
+                      Xây dựng chiến lược thương hiệu bền vững từ con số 0
+                    </h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <a
+                  href="publication.html"
+                  class="project-card"
+                  style="background-image: url(/img/blog/1.jpg)"
+                >
+                  <span class="project-arrow">&rarr;</span>
+                  <div class="project-info">
+                    <span class="project-category">Production</span>
+                    <h3 class="project-title">
+                      Hậu trường sản xuất Podcast: Từ ý tưởng đến tập phát sóng
+                    </h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <a
+                  href="publication.html"
+                  class="project-card"
+                  style="background-image: url(/img/blog/1.jpg)"
+                >
+                  <span class="project-arrow">&rarr;</span>
+                  <div class="project-info">
+                    <span class="project-category">Case Study</span>
+                    <h3 class="project-title">
+                      Case study: Chiến dịch tái định vị thương hiệu thành công
+                    </h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <a
+                  href="publication.html"
+                  class="project-card"
+                  style="background-image: url(/img/blog/1.jpg)"
+                >
+                  <span class="project-arrow">&rarr;</span>
+                  <div class="project-info">
+                    <span class="project-category">CSR</span>
+                    <h3 class="project-title">
+                      CSR không chỉ là trách nhiệm — đó là câu chuyện thương
+                      hiệu
+                    </h3>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -1166,13 +1631,13 @@
             <div class="row footer-contact-row gy-4">
               <div class="col-md-4 footer-contact-item">
                 <span class="contact-icon"><i class="fas fa-phone"></i></span>
-                <span>Điện thoại: +084 - 984 109 109</span>
+                <span>Điện thoại: 0984 109 109</span>
               </div>
               <div class="col-md-4 footer-contact-item">
                 <span class="contact-icon"
                   ><i class="fas fa-envelope"></i
                 ></span>
-                <span>Email: infor@wingsmedia.vn</span>
+                <span>Email: info@wingsmedia.vn</span>
               </div>
               <div class="col-md-4 footer-contact-item">
                 <span class="contact-icon"
@@ -1192,8 +1657,73 @@
         </footer>
       </div>
     </div>
-    <!-- ------------------- -->
+    <div class="floating-contact-group">
+      <!-- Nút Điện thoại -->
+      <a href="tel:+842862730815" class="contact-btn phone-btn">
+        <div class="icon">
+          <!-- Icon điện thoại (dùng SVG) -->
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+            ></path>
+          </svg>
+        </div>
+        <span class="text">0984 109 109</span>
+      </a>
 
+      <!-- Nút Messenger -->
+      <a
+        href="https://www.facebook.com/truyenthongdoicanh"
+        class="contact-btn messenger-btn"
+      >
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C6.48 2 2 6.13 2 11.22c0 2.91 1.49 5.48 3.82 7.15v3.63L9.3 20c.87.24 1.79.37 2.7.37 5.52 0 10-4.13 10-9.22S17.52 2 12 2zm1.18 12.28l-3.08-3.31-6.02 3.31 6.64-7.05 3.12 3.31 5.98-3.31-6.64 7.05z"
+            />
+          </svg>
+        </div>
+        <span class="text">Nhắn tin Messenger</span>
+      </a>
+
+      <!-- Nút Zalo -->
+      <a
+        href="https://zalo.me/0984109109"
+        target="_blank"
+        rel="noopener"
+        class="contact-btn1"
+      >
+        <div class="icon1 zalo-icon">
+          <img src="./img/Logo-Zalo-Arc.webp" alt="zalo" srcset="" />
+        </div>
+      </a>
+      <!-- Nút Back to top -->
+      <a
+        href="#top"
+        id="mil-btt"
+        class="back-to-top-btn"
+        aria-label="Lên đầu trang"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="12" y1="19" x2="12" y2="5"></line>
+          <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+      </a>
+    </div>
     <!-- ------------------ -->
     <script src="./js/plugins/gsap.min.js"></script>
     <script src="./js/plugins/ScrollSmoother.min.js"></script>
