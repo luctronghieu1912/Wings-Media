@@ -576,7 +576,7 @@ h6 {
 .mil-header-main {
   position: fixed;
   top: -12px;
-  bottom: 89%;
+  /* bottom: 89%; */
   left: 0;
   right: 0;
   z-index: 950;
@@ -597,7 +597,7 @@ h6 {
   transform: translateY(0);
 }
 
-.mil-header-main .logo-wings img {
+.logo-wings img {
   height: 100px;
   width: auto;
 }
@@ -650,19 +650,18 @@ h6 {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 991.98px) {
-  .mil-header-main .mil-main-nav {
-    display: none; /* trên mobile chỉ dùng Header 1 + menu hamburger */
-  }
 }
 
 @media (max-width: 575.98px) {
-  .mil-top-panel {
-    padding: 16px 0;
-  }
   .mil-header-main {
-    padding: 14px 0;
+    padding: 16px 0;
+    top: -15px;
+    bottom: 91%;
   }
-  .mil-header-main .logo-wings img {
+  .mil-header-actions {
+    gap: 0px;
+  }
+  .logo-wings img {
     height: 28px;
   }
   .btn-header-contact {
@@ -3940,7 +3939,6 @@ footer .mil-footer-bottom {
   }
   .mil-top-panel {
     height: 25px;
-    background: #01102b;
   }
 }
 
@@ -5595,130 +5593,8 @@ h1.headline {
   gap: 12px;
 }
 
-.fc-item {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  position: relative;
-}
-
-/* Vòng tròn icon — luôn cố định kích thước, nổi trên cùng */
-.fc-circle {
-  width: 52px;
-  height: 52px;
-  min-width: 52px;
-  border-radius: 50% 0 0 50%; /* bo tròn bên trái, phẳng bên phải để dính sát viền */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 1.3rem;
-  box-shadow: -4px 4px 14px rgba(0, 0, 0, 0.25);
-  position: relative;
-  z-index: 2;
-  padding-right: 6px; /* icon lùi vào một chút cho cân đối vì viền phải bị cắt phẳng */
-}
-
-.fc-call .fc-circle {
-  background: #f5323f;
-}
-
-.fc-messenger .fc-circle {
-  background: #ee2f43;
-}
-
-.fc-zalo .fc-circle {
-  background: #ffffff;
-  overflow: hidden;
-}
-
-.fc-circle-zalo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50% 0 0 50%;
-}
-
-.fc-zalo-fallback {
-  color: #0068ff;
-  font-weight: 800;
-  font-size: 0.72rem;
-  letter-spacing: -0.02em;
-}
-
-/* Nhãn/pill chữ — ẩn theo mặc định, xổ ra bên trái khi hover */
-.fc-label {
-  max-width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  opacity: 0;
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: 700;
-  border-radius: 999px;
-  transition:
-    max-width 0.35s ease,
-    opacity 0.25s ease,
-    padding 0.35s ease;
-  margin-right: -26px; /* lùi vào sau vòng tròn, chờ mở ra thì đẩy ra */
-  padding: 14px 0;
-}
-
-.fc-call .fc-label {
-  background: #f5323f;
-}
-.fc-messenger .fc-label {
-  background: #ee2f43;
-}
-.fc-zalo .fc-label {
-  background: #0068ff;
-}
-
-.fc-item:hover .fc-label {
-  max-width: 260px;
-  opacity: 1;
-  padding: 14px 34px 14px 18px;
-  margin-right: -26px;
-}
-
-/* Trạng thái mở bằng tap (mobile) — dùng JS toggle class này */
-.fc-item.fc-open .fc-label {
-  max-width: 260px;
-  opacity: 1;
-  padding: 14px 34px 14px 18px;
-  margin-right: -26px;
-}
-
-.fc-item.fc-open .fc-circle {
-  transform: scale(1.05);
-}
-
-/* Hiệu ứng nhẹ khi hover vòng tròn */
-.fc-item:hover .fc-circle {
-  transform: scale(1.05);
-}
-
-.fc-circle {
-  transition: transform 0.2s ease;
-}
-
 /* ---------- Responsive ---------- */
-@media (max-width: 575.98px) {
-  .mil-floating-contact {
-    right: 0;
-    bottom: 16px;
-    gap: 10px;
-  }
-  .fc-circle {
-    width: 46px;
-    height: 46px;
-    min-width: 46px;
-    font-size: 1.1rem;
-  }
-  .fc-label {
-    font-size: 0.82rem;
-  }
-}
+
 /* Container bám sát lề phải, canh giữa màn hình theo chiều dọc */
 .floating-contact-group {
   position: fixed;
@@ -5820,6 +5696,50 @@ h1.headline {
   width: 60px;
   margin-left: 10px;
 }
+
+/* ---------- Tối ưu Mobile ---------- */
+/* ---------- Cố định kích thước nút Call và Messenger trên MOBILE ---------- */
+@media (max-width: 768px) {
+  .contact-btn.phone-btn,
+  .contact-btn.messenger-btn {
+    width: 44px !important;
+  }
+
+  .contact-btn.phone-btn.active,
+  .contact-btn.messenger-btn.active {
+    width: 44px !important;
+  }
+
+  .contact-btn.phone-btn .text,
+  .contact-btn.messenger-btn .text {
+    display: none; /* ẩn chữ trên mobile, không sổ ra */
+  }
+}
+@media (max-width: 426px) {
+  .contact-btn .icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  .contact-btn.phone-btn,
+  .contact-btn.messenger-btn {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .contact-btn .icon {
+    min-width: 33px;
+  }
+  .contact-btn.phone-btn.active,
+  .contact-btn.messenger-btn.active {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .zalo-icon {
+    height: 60%;
+    margin-left: 20px;
+    margin-top: -10px;
+  }
+}
+
 /* ============================================================
    CORE TEAM SECTION — thêm vào cuối style.css
    ============================================================ */
@@ -6084,4 +6004,14 @@ h1.headline {
 .back-to-top-btn svg {
   width: 22px;
   height: 22px;
+}
+@media (max-width: 426px) {
+  .back-to-top-btn {
+    width: 30px;
+    height: 30px;
+  }
+  .back-to-top-btn svg {
+    width: 16px;
+    height: 16px;
+  }
 }

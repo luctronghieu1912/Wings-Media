@@ -499,14 +499,8 @@ window.addEventListener("scroll", () => {
     backToTopBtn.classList.toggle("show", window.scrollY > 400);
   }
 
-  // Mobile
-  if (window.innerWidth <= 991) {
-    topPanel.classList.remove("scrolled");
-    headerMain.classList.remove("scrolled");
-    return;
-  }
-
-  // Desktop
+  // Áp dụng chung cho cả mobile và desktop:
+  // cuộn xuống quá 50px -> ẩn Header 1 (trong suốt), hiện Header 2 (nền #01102b)
   const isScrolled = window.scrollY > 50;
 
   topPanel.classList.toggle("scrolled", isScrolled);
@@ -667,27 +661,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   contactBtns.forEach((btn) => {
     btn.addEventListener("click", function (e) {
-      // Bỏ qua nút Zalo vì nút này đã được fix cứng mở rộng
-      if (this.classList.contains("zalo-btn")) return;
+      // Bỏ qua Zalo, Call, Messenger — các nút này click là đi luôn, không sổ chữ ra
+      if (
+        this.classList.contains("zalo-btn") ||
+        this.classList.contains("phone-btn") ||
+        this.classList.contains("messenger-btn")
+      ) {
+        return;
+      }
 
-      // Chỉ áp dụng tap-to-reveal cho màn hình điện thoại/tablet (nhỏ hơn 768px)
       if (window.innerWidth <= 768) {
-        // Nếu nút chưa được mở (chưa có class 'active')
         if (!this.classList.contains("active")) {
-          e.preventDefault(); // Ngăn hành động mặc định (ngăn gọi điện/chuyển link ngay lập tức)
-
-          // Đóng tất cả các nút khác lại trước khi mở nút này
+          e.preventDefault();
           contactBtns.forEach((b) => b.classList.remove("active"));
-
-          // Thêm class active để mở rộng nút
           this.classList.add("active");
         }
-        // Nếu đã có class 'active' (chạm lần 2), trình duyệt sẽ cho phép click link bình thường
       }
     });
   });
 
-  // Chạm ra vùng trống bất kỳ trên màn hình để thu gọn tất cả các nút
   document.addEventListener("click", function (e) {
     if (!e.target.closest(".floating-contact-group")) {
       contactBtns.forEach((b) => b.classList.remove("active"));

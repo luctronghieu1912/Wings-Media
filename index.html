@@ -125,7 +125,23 @@
                 </a>
               </div>
             </div>
-            <div class="col-6 mil-jce mil-aic">
+            <div class="col-6 mil-jce mil-aic mil-header-right">
+              <div class="lang-switcher">
+                <a
+                  href="javascript:void(0)"
+                  class="lang-btn active"
+                  data-lang="vi"
+                  onclick="changeLanguage('vi')"
+                  >VN</a
+                >
+                <a
+                  href="javascript:void(0)"
+                  class="lang-btn"
+                  data-lang="en"
+                  onclick="changeLanguage('en')"
+                  >EN</a
+                >
+              </div>
               <div class="mil-buttons-frame">
                 <div class="mil-menu-btn mil-c-gone">
                   <span></span>
@@ -232,7 +248,16 @@
                   >EN</a
                 >
               </div>
-              <a href="contact.html" class="btn-header-contact">Liên hệ</a>
+              <a
+                href="contact.html"
+                class="btn-header-contact d-none d-lg-inline-flex"
+                >Liên hệ</a
+              >
+              <div class="mil-buttons-frame d-lg-none">
+                <div class="mil-menu-btn mil-c-gone">
+                  <span></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -910,7 +935,7 @@
             <div class="row g-4 portfolio-grid">
               <div class="col-md-6 col-lg-4">
                 <a
-                  href="#"
+                  href="hat-cung-nguon-coi.html"
                   class="project-card"
                   style="
                     background-image: url(&quot;./img/home/projects/hatcungnguoncoi.webp&quot;);
