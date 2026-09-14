@@ -672,6 +672,8 @@ h6 {
 
 /* SIGNATURE PROJECT */
 /* Container bọc ngoài */
+.signature-project-banner {
+}
 
 /* Thuộc tính này áp dụng chung cho tất cả các hàng */
 .stat-row {
@@ -1540,6 +1542,7 @@ spaces
   display: flex;
   align-items: center;
 }
+
 .mil-banner .mil-banner-bg {
   position: absolute;
   z-index: -1;
@@ -1581,6 +1584,11 @@ spaces
 .mil-banner .mil-banner-img.mil-out-right {
   width: calc(200% - 95px);
 }
+/* @media (min-width: 1440px) {
+  .mil-banner {
+    padding-top: 350px;
+  }
+} */
 @media (max-width: 992px) {
   .mil-banner {
     height: auto;
