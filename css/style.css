@@ -656,7 +656,7 @@ h6 {
   .mil-header-main {
     padding: 16px 0;
     top: -15px;
-    bottom: 91%;
+    bottom: 89%;
   }
   .mil-header-actions {
     gap: 0px;
@@ -2435,6 +2435,15 @@ call to action
   .mil-cta {
     padding: 30px 30px 0;
   }
+}
+.cta-text {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 0px;
 }
 
 /* -------------------------------------------
@@ -5210,12 +5219,10 @@ h1.headline {
   /* Section 4 — Portfolio */
   .portfolio-title {
     font-size: 1.8rem;
-    text-align: center;
   }
   .btn-outline-gold {
     font-size: 0.72rem;
     padding: 12px 20px;
-    margin-left: 100px;
   }
   .portfolio-grid {
     width: 105%;
@@ -5569,7 +5576,6 @@ h1.headline {
     padding: 0 13px;
   }
   .btn-outline-gold {
-    margin-left: 70px;
   }
   .mil-text {
     width: 100%;
@@ -5812,7 +5818,9 @@ h1.headline {
   background-position: center;
 }
 .team-avatar-4 {
-  background: linear-gradient(135deg, #01102b, #16233f);
+  background-image: url("../img/about/core-team/LCQC.png");
+  background-size: cover;
+  background-position: center;
 }
 .team-avatar-5 {
   background: linear-gradient(135deg, #6fb3ef, #b7dcf7);
