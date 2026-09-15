@@ -159,7 +159,7 @@ body {
   align-items: center;
   padding-left: 15px; /* match container padding -> thẳng hàng */
 }
-@media (max-width: 435px) {
+@media (max-width: 440px) {
   .logo-wings {
     display: flex;
     align-items: center;
@@ -1618,7 +1618,14 @@ spaces
     height: 350px;
   }
 }
-
+@media (max-width: 440px) {
+  .mil-banner {
+    padding-top: 0px;
+  }
+  .mil-banner .mil-banner-image-frame {
+    height: 350px;
+  }
+}
 .mil-banner-inner {
   height: 100vh;
 }
@@ -2434,6 +2441,28 @@ call to action
   padding: 90px 90px 60px;
   background-color: #b89b5e;
 }
+.cta-text {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 0px;
+}
+.cta-btn-now {
+  font-size: 2rem;
+  display: inline-block;
+  padding: 0px 14px;
+  background-color: white;
+  color: #01102b;
+  text-decoration: none;
+  border-radius: 50px;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    filter 0.3s ease;
+}
 @media (max-width: 992px) {
   .mil-cta {
     padding: 60px 60px 30px;
@@ -2444,14 +2473,13 @@ call to action
     padding: 30px 30px 0;
   }
 }
-.cta-text {
-  font-family: "Playfair Display", serif;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.1;
-  text-transform: uppercase;
-  color: white;
-  margin-bottom: 0px;
+@media (max-width: 576px) {
+  .cta-text {
+    font-size: 1.8rem;
+  }
+  .cta-btn-now {
+    font-size: 1.5rem;
+  }
 }
 
 /* -------------------------------------------
@@ -4124,7 +4152,7 @@ h1.headline {
   text-align: center;
   margin-right: 30px;
 }
-@media (max-width: 430px) {
+@media (max-width: 440px) {
   .eyebrow1 {
     font-size: 10px;
   }
@@ -5546,9 +5574,7 @@ h1.headline {
   .footer-contact-item {
     font-size: 0.85rem;
   }
-  .footer-contact-row {
-    margin: 0 46px 0 23px;
-  }
+
   .mil-text {
     font-size: 20px;
   }
@@ -5569,7 +5595,7 @@ h1.headline {
     display: flex;
   }
   .footer-menu li {
-    padding: 0 19px;
+    padding: 0 5px;
   }
   .footer-social {
     margin-bottom: 0;
@@ -5729,7 +5755,7 @@ h1.headline {
     display: none; /* ẩn chữ trên mobile, không sổ ra */
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 440px) {
   .contact-btn .icon svg {
     width: 20px;
     height: 20px;
@@ -6021,7 +6047,7 @@ h1.headline {
   width: 22px;
   height: 22px;
 }
-@media (max-width: 426px) {
+@media (max-width: 440px) {
   .back-to-top-btn {
     width: 30px;
     height: 30px;
